@@ -1,0 +1,22 @@
+#memberSearch {
+    box-sizing: content-box;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.modal-dialog {
+    background-color: white;
+}
+
+#messageSend{
+    margin-left: 85%;
+}
+
+#rateButton {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
