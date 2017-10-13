@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>{{profilefirst}} {{profilelast}}</title>
+        <title>{{profile.first}} {{profile.last}}</title>
         <link rel="stylesheet" href="../css/bootstrap-4.0.0-beta/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/style.css">
-        <link href="../css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />        
+        <link rel="stylesheet" href="../css/style.css">   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">  
         <link rel="shortcut icon" href="../favicon.ico">
     </head>
     <body>
@@ -18,13 +18,15 @@
             </button>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li id="memberSearch"><form class="navbar-form navbar-right">
-                        <input type="text" class="form-control" placeholder="Search for a Professional...">
-                    <li></form>
+                <ul class="navbar-nav mr-auto d-flex justify-content-start">
+                    <li><form class="navbar-form navbar-right">
+                        <input type="text" id="memberSearchBar" class="form-control" placeholder="Search for a Professional...">
+                    </li>
+                    <li><button type="button" class="btn btn-primary" id="memberSearchButton">Search</button></li>
+                    </form>
                 </ul>
                 <ul class="nav navbar-nav my-lg-0 navbar-right">
-                    <li class="nav-link"><a href="/profile" target="_blank">{{username}}</a></li>
+                    <li class="nav-link"><a href="/profile" target="_blank">{{user.username}}</a></li>
                 </ul>
             </div>
         </nav>
@@ -35,7 +37,7 @@
                     <br>
                     <center>
                         <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" width="20%">
-                        <h3>{{profilefirst}} {{profilelast}}</h3>
+                        <h3>{{profile.first}} {{profile.last}}</h3>
                         <h5>{{profile.profession}}</h5>
                         <button type="button" class="btn btn-primary" id="contactButton">Contact</button>                        
                     </center>
@@ -53,7 +55,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-centered">
                             <h4>Experience</h4>
-                            {{#each experience}}
+                            {{#each profile.experience}}
                                 <div class="experienceItem">
                                     <h5>{{this.employer}}</h5>
                                         <ul>
@@ -77,12 +79,8 @@
             {{#if projectcompleted && collaborated && !previouslyrated}}
                 <a href="#head"><button id="rateButton" class="btn btn-danger">Rate</button></a>
             {{/if}}
-
-            <!-- rating stars code
-            <input id="input-id" type="text" class="rating" data-size="lg" >
-            <label for="input-1" class="control-label">Rate This</label>
-            <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="1">
-            -->
+            <input type="hidden" id="profileID" value="{{profile.id}}">
+            <input type="hidden" id="userID" value="{{user.id}}">
         </div>
 
         
@@ -90,7 +88,7 @@
         <div class="modal fade" id="contactModal">
                 <div class="modal-dialog" role="document">
                     <div class="modal-header">
-                        <div class="modal-title"><h3 class="header">Contact {{profilefirst}} {{profilelast}}</h3></div>
+                        <div class="modal-title"><h3 class="header">Contact {{profile.first}} {{profile.last}}</h3></div>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
@@ -112,12 +110,16 @@
         <div class="modal fade" id="rateModal">
             <div class="modal-dialog" role="document">
                 <div class="modal-header">
-                    <div class="modal-title"><h3>Rate {{profilefirst}} {{profilelast}}</h3></div>
+                    <div class="modal-title"><h3>Rate {{profile.first}} {{profile.last}}</h3></div>
                 </div>
                 <div class="modal-body">
-                    <p>Rating system here.</p>
+                    <div id="rateYo" class="col-centered"></div>
+                    <input type="hidden" id="rating_input">
+                    <br>
+                    <div class="row"><div class="col-sm-4"><strong>Leave Review</strong></div> <div class="col-sm-8"><textarea required style="resize: none" rows="4" cols="25" placeholder="Your review here..." id="reviewBody"></textarea></div></div>
                 </div>
                 <div class="modal-footer">
+                    <div class="row"><button type="button" class="btn btn-primary" id="reviewSubmit">Submit</button></div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -126,7 +128,7 @@
         <script src="../js/jquery-3.2.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="../js/bootstrap-4.0.0-beta/bootstrap.min.js"></script>
-        <script src="../js/rating/star-rating.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
         <script src="../js/script.js"></script>
     </body>
 </html>
