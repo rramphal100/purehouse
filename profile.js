@@ -5,6 +5,7 @@
             "password": "12345",
             "first": "John",
             "last": "Doe",
+            "profession": "Software Engineer",
             "experiences": [
             {
                 "employer": "IBM",
@@ -30,30 +31,33 @@
             ]
         },
         "2": {
+            "username": "jdoe19",
+            "password": "12345",
             "first": "Jolly",
             "last": "Doe",
+            "profession": "Product Manager",
             "experiences": [
-            {
-                "employer": "Yahoo",
-                "tag": "Software Developer",
-                "description": "I worked at Yahoo as a software developer for 3 years as of January 2017."
-            },
-            {
-                "employer": "Apple",
-                "tag": "Product Manager",
-                "description": "I worked at Yahoo as a product manager for 7 years as of May 2014."
-            }
+                {
+                    "employer": "Yahoo",
+                    "tag": "Software Developer",
+                    "description": "I worked at Yahoo as a software developer for 3 years as of January 2017."
+                },
+                {
+                    "employer": "Apple",
+                    "tag": "Product Manager",
+                    "description": "I worked at Yahoo as a product manager for 7 years as of May 2014."
+                }
             ],
             "rating": [
-            {
-                "rateeID": "1",
-                "rate": "5"
-            }
+                {
+                    "rateeID": "1",
+                    "rate": "5"
+                }
             ],
             "ideas": [
-            {
-                "id": "1"
-            }
+                {
+                    "id": "1"
+                }
             ]
         }
     }
