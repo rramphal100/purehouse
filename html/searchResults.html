@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Search Results</title>
+        <link rel="stylesheet" href="../css/bootstrap-4.0.0-beta/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+        <link rel="shortcut icon" href="../favicon.ico">
+    </head>
+
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#about">New Haus</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto d-flex justify-content-start">
+                  <li><form class="navbar-form navbar-right">
+                      <input type="text" id="memberSearchBar" class="form-control" placeholder="Search for a Professional...">
+                  </li>
+                  <li><button type="button" class="btn btn-primary" id="memberSearchButton">Search</button></li>
+                  </form>
+              </ul>
+              <ul class="nav navbar-nav my-lg-0 navbar-right">
+                  <li class="nav-link"><a href="/profile" target="_blank">{{user.username}}</a></li>
+              </ul>
+          </div>
+      </nav>
+
+      <div class="container">
+          <div class="col col-centered">
+              <br>
+              <center>
+                  <h3>Search Results for {{tag}}</h3>
+              </center>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+
+      {{#each results}}
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="profileimg">{{this.image_url}}</div>
+              <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" width="20%">
+              <br>
+              <br>
+              <h5>{{this.firstname}} {{this.lastname}}</h5>
+            </div>
+            <div class="col-md-9">
+              <br>
+              <h4>{{this.profession}}</h4>
+              <br>
+              <h6>{{this.description}}</h6>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+
+    </body>
+
+
+</html>
