@@ -16,11 +16,15 @@ $(function(){
     });
 
     $('#reviewSubmit').on('click', function(){
-        $.post("/review", {
-            reviewee = $('#profileID').val(),
-            reviewer = $('#userID').val(),
-            reviewText = $('#reviewBody').val()
-        });
+        $.ajax({
+            type: "POST",
+            url: "/review",
+            data: {
+                reviewee: $('#profileID').val(),
+                reviewer: $('#userID').val(),
+                reviewText: $('#reviewBody').val()   
+            }
+          });
     });
 
 });
