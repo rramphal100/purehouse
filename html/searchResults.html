@@ -27,7 +27,8 @@
                   </form>
               </ul>
               <ul class="nav navbar-nav my-lg-0 navbar-right">
-                  <li class="nav-link"><a href="/profile" target="_blank">{{user.username}}</a></li>
+                  <li class="nav-link"><a href="/profile" target="_blank">profile</a></li>
+                  <li class="nav-link"><a href="/profile" target="_blank">sign out</a></li>
               </ul>
           </div>
       </nav>
@@ -36,7 +37,7 @@
           <div class="col col-centered">
               <br>
               <center>
-                  <h3>Search Results for {{tag}}</h3>
+                  <h3>Search Results for Interior Designer</h3>
               </center>
           </div>
       </div>
@@ -44,25 +45,80 @@
       <br>
       <br>
 
-      {{#each results}}
-        <div class="container">
+      <!-- <div class="container">
+        {{#each results}}
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="profileimg">{{this.image_url}}</div>
               <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" width="20%">
               <br>
               <br>
               <h5>{{this.firstname}} {{this.lastname}}</h5>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-8">
               <br>
               <h4>{{this.profession}}</h4>
               <br>
               <h6>{{this.description}}</h6>
+              <a class="btn btn-secondary" role="button" href="../html/member.html">View Details</a>
             </div>
           </div>
-        </div>
-      {{/each}}
+        {{/each}}
+      </div> -->
+
+      <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" width="20%">
+              <br>
+              <br>
+              <h5>James Donovan</h5>
+            </div>
+            <div class="col-md-8">
+              <h4>Interior Designer</h4>
+              <h6>Interior Designer with 5 years experience. Lighting Specialist. Specified energy efficient lighting fixtures for residential projects including single family homes, affordable housing projects and multi family developments.</h6>
+              <a class="btn btn-secondary" role="button" href="../html/member.html">View Details</a>
+            </div>
+          </div>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="https://img00.deviantart.net/038e/i/2010/150/b/0/me_2010_by_axy_stock.jpg" width="20%">
+              <br>
+              <br>
+              <h5>Angie Hollenbeck</h5>
+            </div>
+            <div class="col-md-8">
+              <h4>Interior Designer</h4>
+              <h6>Hi, I am Angie and have been working in the industry for 7 years on many international projects. Specialties: Green building design knowledge, materials specification, lighting design, training, writing, video production.</h6>
+              <a class="btn btn-secondary" role="button" href="../html/member.html">View Details</a>
+            </div>
+          </div>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="http://www.medcall.co.nz/wp-content/uploads/2015/05/professional-profile-photo.jpg" width="20%">
+              <br>
+              <br>
+              <h5>Katie Zhang</h5>
+            </div>
+            <div class="col-md-8">
+              <h4>Interior Designer & Decorator</h4>
+              <h6>I provide pleasing yet practical design solutions for workplaces that are growing, moving or updating.  By offering expertise in all areas of commercial design,  I will manage your interior project so that you can get back to business</h6>
+              <a class="btn btn-secondary" role="button" href="../html/member.html">View Details</a>
+            </div>
+          </div>
+      </div>
 
     </body>
 
