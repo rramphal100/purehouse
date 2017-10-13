@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>{{profile.first}} {{profile.last}}</title>
+        <title>John Doe</title>
         <link rel="stylesheet" href="../css/bootstrap-4.0.0-beta/bootstrap.min.css">
         <link rel="stylesheet" href="../css/style.css">   
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">  
@@ -26,7 +26,7 @@
                     </form>
                 </ul>
                 <ul class="nav navbar-nav my-lg-0 navbar-right">
-                    <li class="nav-link"><a href="/profile" target="_blank">{{user.username}}</a></li>
+                    <li class="nav-link"><a href="/profile" target="_blank">jd116</a></li>
                 </ul>
             </div>
         </nav>
@@ -37,8 +37,8 @@
                     <br>
                     <center>
                         <img src="http://www.xsjjys.com/data/out/96/WHDQ-512397052.jpg" width="20%">
-                        <h3>{{profile.first}} {{profile.last}}</h3>
-                        <h5>{{profile.profession}}</h5>
+                        <h3>John Doe</h3>
+                        <h5>Software Engineer</h5>
                         <button type="button" class="btn btn-primary" id="contactButton">Contact</button>                        
                     </center>
                     <br>
@@ -55,62 +55,48 @@
                     <div class="row">
                         <div class="col-lg-8 col-centered">
                             <h4>Experience</h4>
-                            {{#each profile.experiences}}
-                                <div class="experienceItem">
-                                    <h5>{{this.employer}}</h5>
-                                        <ul>
-                                            {{#each this.description}}
-                                                <li>{{this}}</li>
-                                            {{/each}}
-                                        </ul>
-                                    
-                                </div>
-                            {{/each}}
-                            <!--
-                            <ul id="experienceList">
-                                <li><p>hi</p></li>
-                            </ul>
-                            -->
-
+                            <div class="experienceItem">
+                                <h5>IBM</h5>
+                                    <ul>
+                                        <li><p>I worked as a software engineer in IBM's Watson team.</p><h5>3 Years</h5></li>
+                                    </ul>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {{#if projectcompleted && collaborated && !previouslyrated}}
-                <a href="#head"><button id="rateButton" class="btn btn-danger">Rate</button></a>
-            {{/if}}
-            <input type="hidden" id="profileID" value="{{profile.id}}">
-            <input type="hidden" id="userID" value="{{user.id}}">
+            <a href="#head"><button id="rateButton" class="btn btn-danger">Rate</button></a>
+            <input type="hidden" id="profileID" value="1">
+            <input type="hidden" id="userID" value="2">
         </div>
 
-        
-
         <div class="modal fade" id="contactModal">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-header">
-                        <div class="modal-title"><h3 class="header">Contact {{profile.first}} {{profile.last}}</h3></div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
+            <div class="modal-dialog" role="document">
+                <div class="modal-header">
+                    <div class="modal-title"><h3 class="header">Contact John Doe</h3></div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                    <div class="row"><div class="col-sm-5"><strong>Email Address:</strong></div> <div class="col-sm-7"><a href="mailto:john.doe@gmail.com">john.doe@gmail.com</a></div></div>
+                    <div class="row"><div class="col-sm-5"><strong>OR</strong></div></div>
+                    <div class="row"><div class="col-sm-5"><strong>Direct Message</strong></div> <div class="col-sm-7"><textarea required style="resize: none" rows="4" cols="20" id="messageBody"></textarea></div></div>
+                    <div class="row"><button type="button" class="btn btn-primary" id="messageSend">Send</button></div>
                     </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                        <div class="row"><div class="col-sm-5"><strong>Email Address:</strong></div> <div class="col-sm-7"><a href="mailto:{{email}}">{{profile.email}}</a></div></div>
-                        <div class="row"><div class="col-sm-5"><strong>OR</strong></div></div>
-                        <div class="row"><div class="col-sm-5"><strong>Direct Message</strong></div> <div class="col-sm-7"><textarea required style="resize: none" rows="4" cols="20" id="messageBody"></textarea></div></div>
-                        <div class="row"><button type="button" class="btn btn-primary" id="messageSend">Send</button></div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
         </div>
 
         <div class="modal fade" id="rateModal">
             <div class="modal-dialog" role="document">
                 <div class="modal-header">
-                    <div class="modal-title"><h3>Rate {{profile.first}} {{profile.last}}</h3></div>
+                    <div class="modal-title"><h3>Rate John Doe</h3></div>
                 </div>
                 <div class="modal-body">
                     <div id="rateYo" class="col-centered"></div>

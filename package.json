@@ -1,0 +1,26 @@
+{
+  "name": "newhaus",
+  "version": "1.0.0",
+  "description": "Links businesses to businesses for collaboration.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rramphal100/purehouse.git"
+  },
+  "author": "Ryan Ramphal, An Le, Anna Guidi, Will Davis, Xiao \"Barron\" Zuo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rramphal100/purehouse/issues"
+  },
+  "homepage": "https://github.com/rramphal100/purehouse#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "firebase": "^4.5.1",
+    "hbs": "^4.0.1",
+    "path": "^0.12.7"
+  }
+}
