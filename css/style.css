@@ -1,0 +1,30 @@
+#memberSearch {
+    box-sizing: content-box;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.modal-dialog {
+    background-color: white;
+}
+
+#messageSend{
+    margin-left: 85%;
+}
+
+/* #reviewSubmit{
+    margin-left: 80%;
+} */
+
+#rateButton {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+
+.glyphicon-star{
+    width: 50px;
+}
