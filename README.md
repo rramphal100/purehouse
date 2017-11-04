@@ -3,7 +3,6 @@
 # PinLab
 
 Team Members:
-=============
 An Le - aql6
 Anna Guidi
 Barron Zuo
