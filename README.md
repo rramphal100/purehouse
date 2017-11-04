@@ -2,12 +2,12 @@
 
 # PinLab
 
-Team Members:
-An Le - aql6
-Anna Guidi
-Barron Zuo
-Ryan Ramphal - rdr233
-Will Davis
+## Team Members:
+* An Le - aql6
+* Anna Guidi
+* Barron Zuo
+* Ryan Ramphal - rdr233
+* Will Davis
 
 [![Waffle.io - Issues in progress](https://badge.waffle.io/rramphal100/purehouse.svg?label=in%20progress&title=In%20Progress)](http://waffle.io/rramphal100/purehouse)
 
