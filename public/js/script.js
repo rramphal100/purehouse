@@ -7,13 +7,13 @@ $(function(){
         $('#rateModal').modal('show');
     });
 
-    $("#rateYo").rateYo({
-        onSet: function (rating, rateYoInstance) {
-            rating = Math.ceil(rating);
-            $('#rating_input').val(rating);
-
-         }
-    });
+    // $("#rateYo").rateYo({
+    //     onSet: function (rating, rateYoInstance) {
+    //         rating = Math.ceil(rating);
+    //         $('#rating_input').val(rating);
+    //
+    //      }
+    // });
 
     $('#reviewSubmit').on('click', function(){
         $.ajax({
@@ -22,7 +22,7 @@ $(function(){
             data: {
                 reviewee: $('#profileID').val(),
                 reviewer: $('#userID').val(),
-                reviewText: $('#reviewBody').val()   
+                reviewText: $('#reviewBody').val()
             }
           });
     });

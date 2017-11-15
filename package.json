@@ -22,7 +22,9 @@
     "express": "^4.16.2",
     "firebase": "^4.6.1",
     "hbs": "^4.0.1",
-    "nodemon": "^1.12.1",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
