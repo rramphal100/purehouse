@@ -12,27 +12,52 @@
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
-      <!--  Nav -->
-        <nav role="navigation">
-          <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="#">Navbar Link</a></li>
-            </ul>
+      <header>
+        <!--  Nav -->
+          <nav role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Community Logo</a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="#">Navbar Link</a></li>
+              </ul>
 
-            <ul id="nav-mobile" class="side-nav">
-              <li><a href="#">Navbar Link</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-          </div>
-        </nav>
+              <ul id="nav-mobile" class="side-nav">
+                <li><a href="#">Navbar Link</a></li>
+              </ul>
+              <a href="#" id="side-nav-toggle" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+          </nav>
 
-        {{{body}}}
+          <!--  Sidebar -->
+          <ul id="nav-mobile" class="side-nav fixed">
+            <li><div class="user-view">
+              <div class="background">
+                <img src="http://materializecss.com/images/office.jpg">
+              </div>
+              <a href="#!user"><img class="circle" src="https://fvcproductions.com/cornell-tech-logos/assets/img/logos/twisted-t/png/rainbow.png"></a>
+              <a href="#!name"><span class="white-text name">Cornell Tech</span></a>
+              <!-- <a href="#!email"><span class="white-text email"></span></a> -->
+            </div></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+            <li><a href="#!">Second Link</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Subheader</a></li>
+            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+          </ul>
+      </header>
+
+      <!--  Body Population -->
+      <main>
+        <div class="container">
+          {{{body}}}
+        </div>
+      </main>
+
 
         <!-- Footer -->
-        <footer class="page-footer orange">
+        <footer class="page-footer">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
