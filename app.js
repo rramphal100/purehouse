@@ -5,11 +5,14 @@ var firebase = require('firebase');
 var dotenv = require('dotenv-safe').load();
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+var hbs = require('hbs')
 
-app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static('public'));
 app.use(cookieParser());
+hbs.registerPartials(__dirname + '/views/partials');
+
+app.set("view engine", "hbs");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -29,6 +32,12 @@ var profiles = [];
 var firebaseProfileRef = fire.database().ref('/profile/');
 firebaseProfileRef.on('value', (snapshot) =>{
   profiles = snapshot.val();
+});
+
+var products = [];
+firebaseProfileRef = fire.database().ref('/products/');
+firebaseProfileRef.on('value', (snapshot) =>{
+  products = snapshot.val();
 });
 
 // Route for handling login requests
@@ -58,7 +67,7 @@ app.get('/', function(req,res,next){
 });
 
 app.get('/productList', function(req,res,next){
-    res.render('productList', {user: req.cookies.user});
+    res.render('productList', {user: req.cookies.user, products: products});
 });
 
 app.get('/profiles', function(req, res, next){
