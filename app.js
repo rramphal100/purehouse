@@ -58,16 +58,12 @@ app.route('/user')
         res.send('Logged out successfully.');
     });
 
-
-//sample routes to show how routes are created and rendered
-//note the http method is specified here (get, post, etc)
-//req = request object, res = response object, next = error catcher / callback function
 app.get('/', function(req,res,next){
     res.render('home', {user: req.cookies.user});
 });
 
 app.get('/productList', function(req,res,next){
-    res.render('productList', {user: req.cookies.user, products: products});
+    res.render('productList', {pageTitle: 'Product List', user: req.cookies.user, products: products});
 });
 
 app.get('/profiles', function(req, res, next){
@@ -75,7 +71,17 @@ app.get('/profiles', function(req, res, next){
         res.render('profiles', {pageTitle: "Profiles", profiles: profiles, user: req.cookies.user});
     }
     else{
-        res.render('home', {user: undefined, loginError: true});
+        res.render('home', {pageTitle: 'PinLab', user: undefined, loginError: true});
+    }
+});
+
+app.get('/productdetails/:id', function(req,res,next){
+    if(req.cookies.user){
+        let curProduct = profiles[req.params.id];
+        res.render('productDetails', {product: curProduct, pageTitle: curProduct.name});
+    }
+    else{
+        res.render('home', {pageTitle: 'PinLab', user: undefined, loginError: true})
     }
 });
 
