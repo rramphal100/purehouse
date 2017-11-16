@@ -4,10 +4,13 @@ var path = require("path");
 var firebase = require('firebase');
 var dotenv = require('dotenv-safe').load();
 var bodyParser = require('body-parser');
+var hbs = require('hbs')
 
-app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static('public'));
+hbs.registerPartials(__dirname + '/views/partials');
+
+app.set("view engine", "hbs");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -29,6 +32,12 @@ firebaseProfileRef.on('value', (snapshot) =>{
   profiles = snapshot.val();
 });
 
+var products = [];
+firebaseProfileRef = fire.database().ref('/products/');
+firebaseProfileRef.on('value', (snapshot) =>{
+  products = snapshot.val();
+});
+
 //sample routes to show how routes are created and rendered
 //note the http method is specified here (get, post, etc)
 //req = request object, res = response object, next = error catcher / callback function
@@ -37,11 +46,11 @@ app.get('/', function(req,res,next){
 });
 
 app.get('/productList', function(req,res,next){
-    res.render('productList');
+  res.render('productList', {products: products});
 });
 
 app.get('/profiles', function(req, res, next){
-    res.render('profiles', {pageTitle: "Profiles", profiles: profiles});
+  res.render('profiles', {pageTitle: "Profiles", profiles: profiles});
 });
 
 //demo how request parameters are used
