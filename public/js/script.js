@@ -7,14 +7,6 @@ $(function(){
         $('#rateModal').modal('show');
     });
 
-    // $("#rateYo").rateYo({
-    //     onSet: function (rating, rateYoInstance) {
-    //         rating = Math.ceil(rating);
-    //         $('#rating_input').val(rating);
-    //
-    //      }
-    // });
-
     $('#reviewSubmit').on('click', function(){
         $.ajax({
             type: "POST",
