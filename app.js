@@ -33,7 +33,11 @@ firebaseProfileRef.on('value', (snapshot) =>{
 //note the http method is specified here (get, post, etc)
 //req = request object, res = response object, next = error catcher / callback function
 app.get('/', function(req,res,next){
-    res.render('home', {pageTitle: "PinLab"});
+    res.render('home');
+});
+
+app.get('/productList', function(req,res,next){
+    res.render('productList');
 });
 
 app.get('/profiles', function(req, res, next){
