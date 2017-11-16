@@ -18,25 +18,31 @@
       <header>
         <!--  Nav -->
           <nav role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Community Logo</a>
+            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">PinLab</a>
 
               <ul id="nav-mobile" class="side-nav">
                 <li><a href="#">Navbar Link</a></li>
               </ul>
 
-              <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!">Profile</a></li>
-                <li><a href="#!">Settings</a></li>
-                <li class="divider"></li>
-                <li><a href="#!">Logout</a></li>
-              </ul>
+              {{#if user}}
+                <ul id="dropdown1" class="dropdown-content">
+                  <li><a href="#!">Profile</a></li>
+                  <li><a href="#!">Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#!">Logout</a></li>
+                </ul>
 
-                <div class="nav-wrapper">
-                  <ul class="right hide-on-med-and-down">
+                  <div class="nav-wrapper">
+                    <ul class="right hide-on-med-and-down">
 
-                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">account_box</i></a></li>
-                  </ul>
-                </div>
+                      <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">account_box</i></a></li>
+                    </ul>
+                  </div>
+              {{else}}
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="/profiles">Log In</a></li>
+                </ul>
+              {{/if}}
 
               <a href="#" id="side-nav-toggle" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>

@@ -29,6 +29,13 @@ firebaseProfileRef.on('value', (snapshot) =>{
   profiles = snapshot.val();
 });
 
+// Route for handling login requests
+app.post('/profiles', function(req, res, next){
+    //get username from database if username and password from req.body match one in db
+    var dbresponse = 'jdoe123';
+    res.json({user: dbresponse});
+});
+
 //sample routes to show how routes are created and rendered
 //note the http method is specified here (get, post, etc)
 //req = request object, res = response object, next = error catcher / callback function
