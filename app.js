@@ -66,6 +66,10 @@ app.get('/', function(req,res,next){
     res.render('home', {user: req.cookies.user});
 });
 
+app.get('/landing', function(req,res,next){
+    res.render('landing', {layout: false});
+});
+
 app.get('/productList', function(req,res,next){
     res.render('productList', {user: req.cookies.user, products: products});
 });

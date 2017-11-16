@@ -4246,6 +4246,44 @@ nav .nav-wrapper {
   height: 100%;
 }
 
+nav.searchnav {
+  /*change width*/
+  position: relative;
+  width: 50%;
+}
+
+.landingPage {
+  /*change the margins*/
+  margin-left: 30%;
+}
+
+img.landingLogo {
+  /*display: block;
+  margin: auto;
+  margin-top: 15%;*/
+  width: 10%;
+  /*max-width:80%;
+  height:auto;*/
+}
+
+img.landingLogoText {
+  width: 25%;
+}
+
+.logos {
+  margin-left: 36%;
+  margin-top: 15%;
+  margin-right: auto;
+  margin-bottom: 2%;
+}
+
+h3.landingText {
+  color: #FFFFFF;
+  text-align: center;
+  /*margin-top: 30%;*/
+}
+
+
 @media only screen and (min-width: 993px) {
   nav a.button-collapse {
     display: none;
