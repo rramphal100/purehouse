@@ -25,24 +25,18 @@
 </ul>
 
 <!-- Middle Content -->
-    <!-- <div id="middle_content">
-      <div class="col s12 m7">
-        <div id="header">
-          <h5 class="header">{{product.name}}</h5>
-          <h6 class="small-description"><font color=#9e9e9e>{{product.shortdescription}}</font></h6>
-        </div>
 
-        <div class="row">
-          <span class="left new badge cyan" data-badge-caption="ios"></span>
-          <span class="left new badge cyan" data-badge-caption="edtech">wearable</span>
-          <span class="left new badge cyan" data-badge-caption="android">4</span>
-        </div>
-      </div> -->
-
-    <div class="col s12 m7">
-        <div class="card horizontal">
+    <div class="col s12 m7" id="card">
+        <div class="card horizontal" >
           <div id="middle_content">
+
             <div class="col s12 m7">
+              <!-- <div id="upvote">
+                <a class="waves-effect waves-light btn">Upvote!</a>
+              </div> -->
+              <div class="card-image" id="card-image">
+                <img src="{{product.media}}">
+              </div>
               <div id="header">
                 <h5 class="header">{{product.name}}</h5>
                 <h6 class="small-description"><font color=#9e9e9e>{{product.shortdescription}}</font></h6>
@@ -50,21 +44,43 @@
 
               <div class="row">
                 <span class="left new badge cyan" data-badge-caption="ios"></span>
-                <span class="left new badge cyan" data-badge-caption="edtech">wearable</span>
-                <span class="left new badge cyan" data-badge-caption="android">4</span>
+                <span class="left new badge cyan" data-badge-caption="edtech"></span>
+                <span class="left new badge cyan" data-badge-caption="android"></span>
               </div>
             </div>
-          <div class="card-image">
-            <img src="{{product.media}}">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.</p>
-            </div>
-            <div class="card-action">
-              <a href="{{product.link}}">Website</a>
-            </div>
-          </div>
+
         </div>
+      </div>
+    </div>
+    <div class="col s12 m7" id="card">
+      <div class="card horizontal">
+        <h5 class="header" id="creator"><font color=#9e9e9e>Creator:</font></h5>
+        <h5 class="small-description" id="creatortext"><font color=#ef5350>{{product.maker.name}}</font></h5>
+      </div>
+    </div>
+
+    <div class="col s12 m7" id="card">
+        <div class="card horizontal" id="cardvideo" >
+            <iframe width="1000" height="562" src="{{product.video}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="col s12 m7" id="card">
+      <div class="card horizontal">
+        <h5 class="header" id="description"><font color=#9e9e9e>Description:</font></h5>
+        <h6 class="small-description" id="descriptiontext"><font color=#9e9e9e>{{product.description}}</font></h6>
+      </div>
+    </div>
+
+    <div class="col 12 m7" id="card">
+      <div class="card horizontal">
+        <h5 class="header" id="talent"><font color=#9e9e9e><span class="nowrap">Talent&nbsp;we&nbsp;need:</span></font></h5>
+        <!-- <h6 class="small-description" id="talenttext"><font color=#9e9e9e>{{product.description}}</font></h6> -->
+          <ul id="roles">
+            <li class="grey-text text-lighten-4"><a href="ourstory.html" style="color:#ef5350"><h5>Front End Engineer</h5></a></li>
+            <li class="grey-text text-lighten-4"><a href="ourstory.html" style="color:#ef5350"><h5>UX Designer</h5></a></li>
+            <li class="grey-text text-lighten-4"><a href="ourstory.html" style="color:#ef5350"><h5>Data Scientist</h5></a></li>
+          </ul>
+
       </div>
     </div>

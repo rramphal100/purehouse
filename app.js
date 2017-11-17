@@ -44,11 +44,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
-app.get('/product', function(req,res){
-    let curProduct = products[1];
-    console.log("Testing here");
-    console.log(curProduct);
-    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, css: ['sidenav.css']});
+app.post('/product', function(req,res){
+    let curProduct = products[parseInt(req.body.projectid)];
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, css: ['sidenav.css', 'productDetails.css']});
 });
 
 app.get('/roleDetail', function(req,res,next){
@@ -88,7 +86,7 @@ app.get('/home', function(req,res){
 });
 
 app.get('/productList', function(req,res){
-    res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products, css: ['sidenav.css']});
+    res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products, css: ['sidenav.css', 'productList.css']});
 });
 
 app.get('/profiles', function(req, res){

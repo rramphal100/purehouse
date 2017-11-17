@@ -9,5 +9,8 @@
     <div class="card-content">
       <p>{{shortdescription}}</p>
     </div>
+    <form class="projectidstorage" action="/product" method="POST">
+      <input type="hidden" name="projectid" value="{{@index}}" />
+    </form>
   </div>
 </div>
