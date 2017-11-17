@@ -14,11 +14,14 @@
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/role.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        {{#each css}}
+          <link type="text/css" rel="stylesheet" media="screen,projection" href="/css/{{this}}" />
+        {{/each}}
     </head>
     <body>
       <header>
         <!--  Nav -->
-          <nav role="navigation" class="cyan lighten-2">
+          <nav role="navigation" class="red lighten-1">
             <!-- <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Community Logo</a> -->
             <div class="row">
               <div class="col m1"></div>
@@ -27,11 +30,12 @@
               <div class="col m2"></div>
               <div class="col m2"></div>
               <div class="col m2">
-                <ul class="right" id="slide-out">
+                <ul class="right">
                   <li><a href="/productlist">Products</a></li>
                   <li><a href="#">Blog</a></li>
                 </ul>
               </div>
+
               <div class="col m2">
                 <div class="nav-wrapper">
                     <ul class="right">
@@ -71,18 +75,25 @@
 
 
         <!-- Footer -->
-        <footer class="page-footer red">
+        <footer class="page-footer red lighten-1" id="footer">
           <div class="container">
             <div class="row" style="margin-bottom: 0px;">
               <div class="col l6 s12">
-                <h5 class="white-text">Our Company</h5>
-                <p class="grey-text text-lighten-4">A dedicated team of Cornell Tech students, helping you make your ideas happen.</p>
-
+                <h5 class="white-text">About</h5>
+                <p>
+                  <font size="2">
+                    Imagine all of the billion-dollar ideas that go un realized every year within universities. We started PinLab so that entrepreneurs with the ideas can get connected to the students with the skills to make them happen.
+                  </font>
+                <p>
               </div>
               <div class="col l3 s12">
                 <h5 class="white-text">Learn More</h5>
                 <ul>
-                  <li><a class="white-text" href="https://cornell.startuptree.co/discover/startups">FAQ</a></li>
+                  <ul>
+                    <li class="grey-text text-lighten-4"><a href="ourstory.html" style="color:white"> Our Story</a></li>
+                    <li class="grey-text text-lighten-4"><a href="theteam.html" style="color:white">The Team</a></li>
+                    <li class="grey-text text-lighten-4"><a href="careers.html" style="color:white">Careers</a></li>
+                  </ul>
                 </ul>
               </div>
               <div class="col l3 s12">

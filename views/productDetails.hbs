@@ -1,8 +1,70 @@
-{{!-- product = current product's JSON object from Firebase to be parsed & rendered in this view --}}
 
-<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <h3 class="header center orange-text">Product Details</h1>
-      <h4 class="page-header red-text">{{product.name}}</h4>
+<!--  Sidebar -->
+<ul id="nav-mobile sidenav" class="side-nav fixed">
+  <li>
+    <div class="user-view" id="sidenav">
+      <div class="background z-depth-1">
+
+      </div id="sidenav_top">
+        <a href="#!user"><img class="circle" src="img/TwistedT.jpg"></a>
+        <a href="#!name"><span class="white-text name">Cornell Tech</span></a>
+        <a href="#!email"><span class="black-text email"></span></a>
+      </div>
+
+  </li>
+  <li><a class="subheader">Categories</a></li>
+  <li><a href="#!"><i class="material-icons">attach_money</i>FinTech</a></li>
+  <li><a href="#!"><i class="material-icons">school</i>EdTech</a></li>
+  <li><a href="#!"><i class="material-icons">watch</i>Wearable</a></li>
+  <li><a href="#!"><i class="material-icons">settings_remote</i>IOT</a></li>
+  <li><a href="#!"><i class="material-icons">store</i>Retails</a></li>
+  <li><a href="#!"><i class="material-icons">live_tv</i>Media</a></li>
+  <li><a href="#!"><i class="material-icons">people</i>Social</a></li>
+  <li><a href="#!"><i class="material-icons">local_florist</i>Nonprofit</a></li>
+  <li><div class="divider"></div></li>
+</ul>
+
+<!-- Middle Content -->
+    <!-- <div id="middle_content">
+      <div class="col s12 m7">
+        <div id="header">
+          <h5 class="header">{{product.name}}</h5>
+          <h6 class="small-description"><font color=#9e9e9e>{{product.shortdescription}}</font></h6>
+        </div>
+
+        <div class="row">
+          <span class="left new badge cyan" data-badge-caption="ios"></span>
+          <span class="left new badge cyan" data-badge-caption="edtech">wearable</span>
+          <span class="left new badge cyan" data-badge-caption="android">4</span>
+        </div>
+      </div> -->
+
+    <div class="col s12 m7">
+        <div class="card horizontal">
+          <div id="middle_content">
+            <div class="col s12 m7">
+              <div id="header">
+                <h5 class="header">{{product.name}}</h5>
+                <h6 class="small-description"><font color=#9e9e9e>{{product.shortdescription}}</font></h6>
+              </div>
+
+              <div class="row">
+                <span class="left new badge cyan" data-badge-caption="ios"></span>
+                <span class="left new badge cyan" data-badge-caption="edtech">wearable</span>
+                <span class="left new badge cyan" data-badge-caption="android">4</span>
+              </div>
+            </div>
+          <div class="card-image">
+            <img src="{{product.media}}">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.</p>
+            </div>
+            <div class="card-action">
+              <a href="{{product.link}}">Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
