@@ -7,16 +7,6 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var hbs = require('hbs')
 
-app.set("views", path.join(__dirname, "views"));
-app.use(express.static('public'));
-app.use(cookieParser());
-hbs.registerPartials(__dirname + '/views/partials');
-
-app.set("view engine", "hbs");
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-
 var config = {
     apiKey: process.env.APIKEY,
     authDomain: process.env.AUTHDOMAIN,
@@ -44,6 +34,26 @@ var roles = [];
 var firebaseRoleRef = fire.database().ref('/roles/');
 firebaseRoleRef.on('value', (snapshot) => {
     roles = snapshot.val();
+});
+
+app.use(express.static(path.join(__dirname,'/public')));
+app.use(cookieParser());
+hbs.registerPartials(__dirname + '/views/partials');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "hbs");
+
+app.get('/product', function(req,res){
+    let curProduct = products[1];
+    console.log("Testing here");
+    console.log(curProduct);
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct});
+});
+
+app.get('/roledetails/:roleid', function(req,res,next){
+    let curRole = roles[parseInt(req.params.roleid)];
+    res.render('roledetails', {pageTitle: curRole.name, user: req.cookies.user, role: curRole});
 });
 
 // Route for handling login requests
@@ -76,13 +86,6 @@ app.get('/productList', function(req,res){
     res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products});
 });
 
-app.get('/product', function(req,res){
-    let curProduct = products[1];
-    console.log("Testing here");
-    console.log(curProduct);
-    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct});
-});
-
 app.get('/profiles', function(req, res){
     if(req.cookies.user){
         res.render('profiles', {pageTitle: "Profiles", profiles: profiles, user: req.cookies.user});
@@ -92,10 +95,7 @@ app.get('/profiles', function(req, res){
     }
 });
 
-app.get('/roledetails/:roleid', function(req,res,next){
-    let curRole = roles[parseInt(req.params.roleid)];
-    res.render('roledetails', {pageTitle: curRole.name, user: req.cookies.user, role: curRole});
-});
+
 
 hostport = 8080;
 if (process.env.NODE_ENV === 'PRODUCTION'){
