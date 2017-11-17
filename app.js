@@ -88,7 +88,7 @@ app.get('/home', function(req,res){
 });
 
 app.get('/productList', function(req,res){
-    res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products, css: ['sidenav.css']});
+    res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products, css: ['sidenav.css', 'productList.css']});
 });
 
 app.get('/profiles', function(req, res){
