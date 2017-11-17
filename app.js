@@ -68,6 +68,7 @@ app.post('/product', function(req,res){
 
 app.post('/roledetails', function(req,res,next){
     let curRole = roles[parseInt(req.body.roleid)];
+    console.log(JSON.stringify(curRole.responsibilities));
     res.render('roleDetail', {pageTitle: curRole.name, user: req.cookies.user, role: curRole});
 });
 
@@ -115,8 +116,6 @@ app.get('/profiles', function(req, res){
         res.render('home', {pageTitle: 'PinLab', user: undefined, loginError: true});
     }
 });
-
-
 
 hostport = 8080;
 if (process.env.NODE_ENV === 'PRODUCTION'){
