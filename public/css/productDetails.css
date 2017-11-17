@@ -12,7 +12,10 @@
   margin: 10px;
   border-radius: 10px;
   padding-top: 15px;
+}
 
+#upvote{
+  float: right;
 }
 
 #card{
@@ -35,7 +38,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 100px;
-  margin-left: 20px
+  margin-left: 80px
 }
 
 #cardvideo{
@@ -45,4 +48,25 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+#talent{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 90px
+}
+#talenttext{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  margin-left: 50px
+}
+
+#roles{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  margin-left: 50px
+
 }
