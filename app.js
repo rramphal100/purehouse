@@ -35,9 +35,15 @@ firebaseProfileRef.on('value', (snapshot) =>{
 });
 
 var products = [];
-firebaseProfileRef = fire.database().ref('/products/');
-firebaseProfileRef.on('value', (snapshot) =>{
+firebaseProductRef = fire.database().ref('/products/');
+firebaseProductRef.on('value', (snapshot) =>{
   products = snapshot.val();
+});
+
+var roles = [];
+var firebaseRoleRef = fire.database().ref('/roles/');
+firebaseRoleRef.on('value', (snapshot) => {
+    roles = snapshot.val();
 });
 
 // Route for handling login requests
@@ -82,6 +88,11 @@ app.get('/profiles', function(req, res, next){
 app.get('/product/:id', function(req,res,next){
     let curProduct = products[parseInt(req.params.id)];
     res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct});
+});
+
+app.get('/roledetails/:roleid', function(req,res,next){
+    let curRole = roles[parseInt(req.params.roleid)];
+    res.render('roledetails', {pageTitle: curRole.name, user: req.cookies.user, role: curRole});
 });
 
 hostport = 8080;
