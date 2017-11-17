@@ -46,7 +46,7 @@ app.set("view engine", "hbs");
 
 app.post('/product', function(req,res){
     let curProduct = products[parseInt(req.body.projectid)];
-    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, css: ['sidenav.css', 'productDetails.css']});
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, css: ['sidenav.css', 'productDetails.css', 'review.css']});
 });
 
 app.get('/roledetails/:roleid', function(req,res,next){
