@@ -25,3 +25,17 @@
 #logo{
   width: 100px;
 }
+
+#sidenav{
+  /*background-color: #4dd0e1;*/
+  background-color: #e53935;
+}
+
+#sidenav_top{
+  display: inline-block;
+}
+
+#middle_content{
+  padding-right: 75px;
+  padding-left: 75px;
+}
