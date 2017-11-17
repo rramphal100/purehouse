@@ -74,6 +74,10 @@ app.get('/productList', function(req,res,next){
     res.render('productList', {user: req.cookies.user, products: products});
 });
 
+app.get('/roleDetail', function(req,res,next){
+    res.render('roleDetail', {user: req.cookies.user, products: products});
+});
+
 app.get('/profiles', function(req, res, next){
     if(req.cookies.user){
         res.render('profiles', {pageTitle: "Profiles", profiles: profiles, user: req.cookies.user});
