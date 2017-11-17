@@ -63,11 +63,11 @@ app.route('/user')
 //note the http method is specified here (get, post, etc)
 //req = request object, res = response object, next = error catcher / callback function
 app.get('/', function(req,res,next){
-    res.render('home', {user: req.cookies.user});
+    res.render('landing', {user: req.cookies.user, layout: false});
 });
 
-app.get('/landing', function(req,res,next){
-    res.render('landing', {layout: false});
+app.get('/home', function(req,res,next){
+    res.render('home');
 });
 
 app.get('/productList', function(req,res,next){
