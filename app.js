@@ -59,11 +59,11 @@ app.route('/user')
     });
 
 app.get('/', function(req,res,next){
-    res.render('home', {pageTitle: 'PinLab', user: req.cookies.user});
+    res.render('landing', {user: req.cookies.user, layout: false});
 });
 
-app.get('/landing', function(req,res,next){
-    res.render('landing', {pageTitle: 'PinLab', layout: false});
+app.get('/home', function(req,res,next){
+    res.render('home');
 });
 
 app.get('/productList', function(req,res,next){
