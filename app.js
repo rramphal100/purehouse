@@ -78,7 +78,15 @@ app.get('/', function(req,res){
     res.render('landing', {user: req.cookies.user, layout: false});
 });
 
+<<<<<<< HEAD
+app.get('/schoolselect', function(req,res,next){
+    res.render('schoolselect', {user: req.cookies.user, layout: false});
+});
+
+app.get('/home', function(req,res,next){
+=======
 app.get('/home', function(req,res){
+>>>>>>> 3a539f2dfa655a97ab4e1fdc78f4baf841d0db90
     res.render('home');
 });
 

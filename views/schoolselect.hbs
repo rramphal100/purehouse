@@ -12,9 +12,10 @@
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    </head>
-    <body>
+        <link href="css/home.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/schoolselect.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <body id="landingBackground" background="img/background.png" style="background-size:cover">
       <header>
         <!--  Nav -->
           <nav role="navigation" class="red lighten-1">
@@ -26,12 +27,11 @@
               <div class="col m2"></div>
               <div class="col m2"></div>
               <div class="col m2">
-                <ul class="right">
-                  <li><a href="/productlist">Products</a></li>
-                  <li><a href="#">Blog</a></li>
+                <ul class="right" id="slide-out">
+                  <li><a href="badges.html">Products</a></li>
+                  <li><a href="badges.html">Blog</a></li>
                 </ul>
               </div>
-
               <div class="col m2">
                 <div class="nav-wrapper">
                     <ul class="right">
@@ -62,58 +62,48 @@
           </nav>
       </header>
 
-      <!--  Body Population -->
-      <main>
-        <!-- <div class="container"> -->
-          {{{body}}}
-        <!-- </div> -->
-      </main>
-
-
-        <!-- Footer -->
-        <footer class="page-footer red lighten-1" id="footer">
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br><br>
+      <div class="section no-pad-bot" id="index-banner">
           <div class="container">
-            <div class="row" style="margin-bottom: 0px;">
-              <div class="col l6 s12">
-                <h5 class="white-text">About</h5>
-                <p>
-                  <font size="2">
-                    Imagine all of the billion-dollar ideas that go un realized every year within universities. We started PinLab so that entrepreneurs with the ideas can get connected to the students with the skills to make them happen.
-                  </font>
-                <p>
-              </div>
-              <div class="col l3 s12">
-                <h5 class="white-text">Learn More</h5>
-                <ul>
-                  <ul>
-                    <li class="grey-text text-lighten-4"><a href="ourstory.html" style="color:white"> Our Story</a></li>
-                    <li class="grey-text text-lighten-4"><a href="theteam.html" style="color:white">The Team</a></li>
-                    <li class="grey-text text-lighten-4"><a href="careers.html" style="color:white">Careers</a></li>
+            <br><br>
+            <!-- <h3 class="header center orange-text">PinLab</h3> -->
+            <br><br>
+            <br><br>
+            <br><br>
 
-                  </ul>
-                </ul>
-              </div>
-              <div class="col l3 s12">
-                <h5 class="white-text">Connect</h5>
-                <ul>
-                  <li><a class="white-text text-lighten-3" href="mailto:info@pinlab.com">Email</a></li>
-                </ul>
-              </div>
+            <div class="row center">
+              <button type="button" id="schoolselect">
+                <img src="img/TwistedT.jpg" width="175" height="175">
+              </button>
             </div>
+
+            <div class="row center">
+              <h4 class="header white-text ">Cornell Tech</h4>
+            </div>
+
+            <div class="row center">
+              <div class="col s1 m3">
+
+              </div>
+
+            </div>
+            <br><br>
           </div>
-          <input type="hidden" name="user" id="user">{{user}}</input>
-          <!-- <div class="footer-copyright">
-            <div class="container">
-            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-            </div>
-          </div> -->
-        </footer>
+        </div>
+        <br><br>
+      </div>
+  </div>
 
-         <!--  Scripts-->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/init.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
-    </body>
-</html>
+    <!-- Footer -->
+
+
+     <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+  </html>
