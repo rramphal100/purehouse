@@ -35,9 +35,15 @@ firebaseProfileRef.on('value', (snapshot) =>{
 });
 
 var products = [];
-firebaseProfileRef = fire.database().ref('/products/');
-firebaseProfileRef.on('value', (snapshot) =>{
+firebaseProductRef = fire.database().ref('/products/');
+firebaseProductRef.on('value', (snapshot) =>{
   products = snapshot.val();
+});
+
+var roles = [];
+var firebaseRoleRef = fire.database().ref('/roles/');
+firebaseRoleRef.on('value', (snapshot) => {
+    roles = snapshot.val();
 });
 
 // Route for handling login requests
@@ -47,7 +53,7 @@ app.route('/user')
         //log user in if match and currently not logged in
         if(!req.cookies.user){
             res.cookie('user', 'ryanramphal');
-            res.send('Logged in as ' + 'ryanramphal');
+            res.render('/home', {pageTitle: 'PinLab', user: 'ryanramphal'});
         }
         else{
             res.status(403).send("Error: Already logged in!");
@@ -58,10 +64,6 @@ app.route('/user')
         res.send('Logged out successfully.');
     });
 
-
-//sample routes to show how routes are created and rendered
-//note the http method is specified here (get, post, etc)
-//req = request object, res = response object, next = error catcher / callback function
 app.get('/', function(req,res,next){
     res.render('landing', {user: req.cookies.user, layout: false});
 });
@@ -71,7 +73,7 @@ app.get('/home', function(req,res,next){
 });
 
 app.get('/productList', function(req,res,next){
-    res.render('productList', {user: req.cookies.user, products: products});
+    res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products});
 });
 
 app.get('/profiles', function(req, res, next){
@@ -79,13 +81,18 @@ app.get('/profiles', function(req, res, next){
         res.render('profiles', {pageTitle: "Profiles", profiles: profiles, user: req.cookies.user});
     }
     else{
-        res.render('home', {user: undefined, loginError: true});
+        res.render('home', {pageTitle: 'PinLab', user: undefined, loginError: true});
     }
 });
 
-//demo how request parameters are used
-app.get('/params/:text', function(req, res, next){
-    res.send(req.params.text);
+app.get('/product/:id', function(req,res,next){
+    let curProduct = products[parseInt(req.params.id)];
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct});
+});
+
+app.get('/roledetails/:roleid', function(req,res,next){
+    let curRole = roles[parseInt(req.params.roleid)];
+    res.render('roledetails', {pageTitle: curRole.name, user: req.cookies.user, role: curRole});
 });
 
 hostport = 8080;
