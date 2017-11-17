@@ -5,16 +5,16 @@ ul.roleRequirements > li {
 
 #bluebox {
   float: left;
-  width: 35%;
-  height: 520px;
-  margin: 5px;
-  background-color: #0089ec;
+  width: 785px;
+  height: 600px;
+  padding-right: 100px;
+  background-color: #ef5350;
   /*think this goes too low*/
-  height: -webkit-fill-available;
 }
 
 #anna {
-  padding-right: 0px;
+  padding-right: 20px;
+  padding-left: 50px;
 }
 
 .roleIcon {
@@ -22,6 +22,12 @@ ul.roleRequirements > li {
   display: block;
   margin: auto;
   /*vertical-align: middle;*/
-  margin-top: 20%;
+  height: auto;
+  margin-top: 30%;
+  margin-left: 40%;
   width: 30%;
+}
+
+#whole{
+  padding-top: 30px;
 }

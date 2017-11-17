@@ -62,8 +62,8 @@ app.post('/product', function(req,res){
 
     console.log(JSON.stringify(curRoles));
 
-    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, 
-        roles: curRoles, css: ['sidenav.css', 'productDetails.css']});
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct,
+        roles: curRoles, css: ['sidenav.css', 'productDetails.css', 'review.css']}); 
 });
 
 app.post('/roledetails', function(req,res,next){
