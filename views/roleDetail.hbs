@@ -1,31 +1,33 @@
-<div class="row">
-  <div class="col s12 m6" id="anna" >
-    <div class="card" id="an" style="background-color: #FFFFFF">
+<div class="row" id="whole">
+  <div class="col s6 m6"id="anna" >
+
+    <!-- <div class="card" id="an" style="background-color: #FFFFFF"> -->
       <div class="card-content white-text">
-        <span class="card-title" style="color: #2778bd"><strong>{{role.name}}</strong></span>
+        <span class="card-title" style="color: #ef5350"><h5><strong>{{role.name}}</strong></h5></span>
         <hr>
-        <h5 style="color: #818181">{{role.description}}</h5>
+        <h5 style="color: black">{{role.description}}</h5>
         <br>
-        <h5 style="color: #2778bd">Responsibilities</h5>
-        <ul class="roleRequirements" style="color: #818181">
-          <li>Develop and improve product features</li>
-          <br>
-          <li>Apply predictive modeling techniques to a variety of user modeling tasks</li>
-          <br>
-          <li>Work closely with engineers to push algorithms into production</li>
-          <br>
-          <li>Identify other opportunities that will help improve operations</li>
-          <br>
-          <li>Gather, cleanse and prepare model ready datasets</li>
-        </ul>
+        {{#if role.responsibilities}}
+          <h5 style="color: #ef5350">Responsibilities</h5>
+          <ul class="roleRequirements" style="color: #818181">
+            {{#each role.responsibilities}}
+              <li>{{text}}</li>
+            {{/each}}
+          </ul>
+        {{/if}}
       </div>
+
       <div class="card-action">
-        <a class="waves-effect waves-light btn" style="background-color: #2778bd">I'm Interested!</a>
+        <a class="waves-effect waves-light btn" style="background-color: #ef5350">I'm Interested!</a>
       </div>
-    </div>
+    <!-- </div> -->
+    <b></b>
+
   </div>
 
-  <div id="bluebox" class="col s12 m4">
-    <img src="./img/tablet-and-laptop.png" alt="mediaImg" class="roleIcon">
-  </div>
+
+
+    <div id="bluebox" class="col s6 m6 z-depth-2">
+      <img src="./img/tablet-and-laptop.png" alt="mediaImg" class="roleIcon">
+    </div>
 </div>

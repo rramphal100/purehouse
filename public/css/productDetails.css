@@ -7,11 +7,11 @@
 
 #card-image{
   float: left;
-  height: 85px;
-  width: 85px;
+  height: 110px;
+  width: 110px;
   margin: 10px;
   border-radius: 10px;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 #upvote{
@@ -38,7 +38,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 100px;
-  margin-left: 80px
+  margin-left: 300px;
 }
 
 #cardvideo{
@@ -66,8 +66,8 @@
 #roles{
   margin-top: 10px;
   margin-bottom: 20px;
-  margin-right: 50px;
-  margin-left: 50px
+  margin-right: 90px;
+  margin-left: auto;
 
 }
 #creator{
@@ -77,8 +77,17 @@
   margin-left: 100px
 }
 #creatortext{
-  margin-top: 20px;
+
+  margin-top: 10px;
   margin-bottom: 20px;
-  margin-right: 50px;
-  margin-left: 50px
+  margin-right: 90px;
+  margin-left: auto;
+}
+
+.inline{
+  display: inline;
+}
+
+#vote-button{
+  margin-top: 10px;
 }
