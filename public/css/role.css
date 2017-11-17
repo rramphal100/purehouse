@@ -1,0 +1,4 @@
+ul.roleRequirements > li {
+  list-style-type: disc;
+  list-style-position: inside;
+}

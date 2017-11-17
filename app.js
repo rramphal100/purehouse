@@ -77,7 +77,7 @@ app.get('/productList', function(req,res,next){
 });
 
 app.get('/roleDetail', function(req,res,next){
-    res.render('roleDetail', {user: req.cookies.user, products: products});
+    res.render('roleDetail', {user: req.cookies.user, role: roles[0]});
 });
 
 app.get('/profiles', function(req, res, next){
