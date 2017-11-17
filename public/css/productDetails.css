@@ -83,3 +83,11 @@
   margin-right: 90px;
   margin-left: auto;
 }
+
+.inline{
+  display: inline;
+}
+
+#vote-button{
+  margin-top: 10px;
+}
