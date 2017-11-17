@@ -19,8 +19,11 @@ $(function(){
           });
     });
 
-    $('.card').on('click', function(){
+    $('.productcard').on('click', function(){
         $(this).find('.projectidstorage').submit();
     });
 
+    $('.rolesubmit').on('click', function(){
+        $(this).find('.roleidcontainer').submit();
+    });
 });

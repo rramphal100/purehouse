@@ -70,10 +70,25 @@
       <div class="card horizontal">
         <h5 class="header" id="talent"><font color=#9e9e9e><span class="nowrap">Talent&nbsp;we&nbsp;need:</span></font></h5>
         <!-- <h6 class="small-description" id="talenttext"><font color=#9e9e9e>{{product.description}}</font></h6> -->
+          
+          <!--
+          
           <ul id="roles">
             <li class="grey-text text-lighten-4"><a href="ourstory.html" style="color:red"><h5>Front End Engineer</h5></a></li>
             <li class="grey-text text-lighten-4"><a href="ourstory.html" style="color:red"><h5>UX Designer</h5></a></li>
             <li class="grey-text text-lighten-4"><a href="ourstory.html" style="color:red"><h5>Data Scientist</h5></a></li>
+          </ul>
+
+          -->
+          <ul id="roles">
+            {{#each roles}}
+              <li class="grey-text text-lighten-4 rolesubmit">
+                <h5 style="color:red">{{name}}</h5>
+                <form class="roleidcontainer" action="/roledetails" method="POST">
+                  <input type="hidden" name="roleid" value="{{roleid}}" />
+                </form>
+              </li>
+            {{/each}}
           </ul>
 
       </div>

@@ -46,12 +46,29 @@ app.set("view engine", "hbs");
 
 app.post('/product', function(req,res){
     let curProduct = products[parseInt(req.body.projectid)];
-    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, css: ['sidenav.css', 'productDetails.css']});
+
+    //get roles for this product
+    let curRoles = [];
+    for(let role of roles){
+        console.log('id from req body: ', req.body.projectid);
+        console.log('id from current role: ', role.productid);
+        if(role.productid == req.body.projectid){
+            curRoles.push(role);
+        }
+        else{
+            curRoles.push(null);
+        }
+    }
+
+    console.log(JSON.stringify(curRoles));
+
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, 
+        roles: curRoles, css: ['sidenav.css', 'productDetails.css']});
 });
 
-app.get('/roledetails/:roleid', function(req,res,next){
-    let curRole = roles[parseInt(req.params.roleid)];
-    res.render('roledetails', {pageTitle: curRole.name, user: req.cookies.user, role: curRole});
+app.post('/roledetails', function(req,res,next){
+    let curRole = roles[parseInt(req.body.roleid)];
+    res.render('roleDetail', {pageTitle: curRole.name, user: req.cookies.user, role: curRole});
 });
 
 // Route for handling login requests
@@ -86,7 +103,8 @@ app.get('/home', function(req,res){
 });
 
 app.get('/productList', function(req,res){
-    res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products, css: ['sidenav.css', 'productList.css']});
+    res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products,
+        css: ['sidenav.css', 'productList.css']});
 });
 
 app.get('/profiles', function(req, res){
