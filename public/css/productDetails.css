@@ -66,8 +66,8 @@
 #roles{
   margin-top: 10px;
   margin-bottom: 20px;
-  margin-right: 50px;
-  margin-left: 50px
+  margin-right: 90px;
+  margin-left: auto;
 
 }
 #creator{
@@ -77,8 +77,9 @@
   margin-left: 100px
 }
 #creatortext{
-  margin-top: 20px;
+
+  margin-top: 10px;
   margin-bottom: 20px;
-  margin-right: 50px;
-  margin-left: 50px
+  margin-right: 90px;
+  margin-left: auto;
 }

@@ -25,6 +25,8 @@ body {
 
 main {
   flex: 1 0 auto;
+  padding-top: 10px;
+  padding-bottom: 75px;
 }
 
 #middle_content{
@@ -34,5 +36,5 @@ main {
 
 #footer{
 padding-top: 10px;
-padding-bottom: 10px;
+padding-bottom: 20px;
 }
