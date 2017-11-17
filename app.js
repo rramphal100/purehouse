@@ -51,9 +51,9 @@ app.get('/product', function(req,res){
     res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, css: ['sidenav.css']});
 });
 
-app.get('/roledetails/:roleid', function(req,res,next){
-    let curRole = roles[parseInt(req.params.roleid)];
-    res.render('roledetails', {pageTitle: curRole.name, user: req.cookies.user, role: curRole});
+app.get('/roleDetail', function(req,res,next){
+    let curRole = roles[0];
+    res.render('roleDetail', {pageTitle: curRole.name, user: req.cookies.user, role: roles[0]});
 });
 
 // Route for handling login requests

@@ -2,3 +2,26 @@ ul.roleRequirements > li {
   list-style-type: disc;
   list-style-position: inside;
 }
+
+#bluebox {
+  float: left;
+  width: 35%;
+  height: 520px;
+  margin: 5px;
+  background-color: #0089ec;
+  /*think this goes too low*/
+  height: -webkit-fill-available;
+}
+
+#anna {
+  padding-right: 0px;
+}
+
+.roleIcon {
+  /*display:flex;*/
+  display: block;
+  margin: auto;
+  /*vertical-align: middle;*/
+  margin-top: 20%;
+  width: 30%;
+}
