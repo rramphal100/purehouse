@@ -19,4 +19,8 @@ $(function(){
           });
     });
 
+    $('.card').on('click', function(){
+        $(this).find('.projectidstorage').submit();
+    });
+
 });

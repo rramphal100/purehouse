@@ -44,10 +44,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
-app.get('/product', function(req,res){
-    let curProduct = products[1];
-    console.log("Testing here");
-    console.log(curProduct);
+app.post('/product', function(req,res){
+    let curProduct = products[parseInt(req.body.projectid)];
     res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, css: ['sidenav.css', 'productDetails.css']});
 });
 
