@@ -48,7 +48,7 @@ app.get('/product', function(req,res){
     let curProduct = products[1];
     console.log("Testing here");
     console.log(curProduct);
-    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct});
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, css: ['sidenav.css']});
 });
 
 app.get('/roledetails/:roleid', function(req,res,next){
@@ -87,7 +87,7 @@ app.get('/home', function(req,res){
 });
 
 app.get('/productList', function(req,res){
-    res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products});
+    res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products, css: ['sidenav.css']});
 });
 
 app.get('/profiles', function(req, res){
