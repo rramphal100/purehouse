@@ -58,30 +58,32 @@ app.route('/user')
         res.send('Logged out successfully.');
     });
 
-app.get('/', function(req,res,next){
+app.get('/', function(req,res){
     res.render('landing', {user: req.cookies.user, layout: false});
 });
 
-app.get('/home', function(req,res,next){
+app.get('/home', function(req,res){
     res.render('home');
 });
 
-app.get('/productList', function(req,res,next){
+app.get('/productList', function(req,res){
     res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products});
 });
 
-app.get('/profiles', function(req, res, next){
+app.get('/product', function(req,res){
+    let curProduct = products[1];
+    console.log("Testing here");
+    console.log(curProduct);
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct});
+});
+
+app.get('/profiles', function(req, res){
     if(req.cookies.user){
         res.render('profiles', {pageTitle: "Profiles", profiles: profiles, user: req.cookies.user});
     }
     else{
         res.render('home', {pageTitle: 'PinLab', user: undefined, loginError: true});
     }
-});
-
-app.get('/product/:id', function(req,res,next){
-    let curProduct = products[parseInt(req.params.id)];
-    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct});
 });
 
 hostport = 8080;

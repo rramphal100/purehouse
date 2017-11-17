@@ -1,8 +1,41 @@
-{{!-- product = current product's JSON object from Firebase to be parsed & rendered in this view --}}
-
-<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <h3 class="header center orange-text">Product Details</h1>
-      <h4 class="page-header red-text">{{product.name}}</h4>
+<!--  Sidebar -->
+<ul id="nav-mobile" class="side-nav fixed">
+  <li>
+    <div class="user-view">
+      <div class="background">
+        <img src="http://materializecss.com/images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="https://fvcproductions.com/cornell-tech-logos/assets/img/logos/twisted-t/png/rainbow.png"></a>
+      <a href="#!name"><span class="white-text name">Cornell Tech</span></a>
+      <!-- <a href="#!email"><span class="white-text email"></span></a> -->
     </div>
-</div>
+  </li>
+  <li><a href="#!"><i class="material-icons">attach_money</i>FinTech</a></li>
+  <li><a href="#!"><i class="material-icons">school</i>EdTech</a></li>
+  <li><a href="#!"><i class="material-icons">watch</i>Wearable</a></li>
+  <li><a href="#!"><i class="material-icons">settings_remote</i>IOT</a></li>
+  <li><a href="#!"><i class="material-icons">store</i>Retails</a></li>
+  <li><a href="#!"><i class="material-icons">live_tv</i>Media</a></li>
+  <li><a href="#!"><i class="material-icons">people</i>Social</a></li>
+  <li><a href="#!"><i class="material-icons">local_florist</i>Nonprofit</a></li>
+</ul>
+
+<!-- Middle Content -->
+    <div class="container">
+      <div class="col s12 m7">
+        <h4 class="header">{{product.name}}</h4>
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="{{product.media}}">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
