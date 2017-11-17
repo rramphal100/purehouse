@@ -47,7 +47,7 @@ app.route('/user')
         //log user in if match and currently not logged in
         if(!req.cookies.user){
             res.cookie('user', 'ryanramphal');
-            res.send('Logged in as ' + 'ryanramphal');
+            res.render('/home', {pageTitle: 'PinLab', user: 'ryanramphal'});
         }
         else{
             res.status(403).send("Error: Already logged in!");
@@ -59,11 +59,15 @@ app.route('/user')
     });
 
 app.get('/', function(req,res,next){
-    res.render('home', {user: req.cookies.user});
+    res.render('home', {pageTitle: 'PinLab', user: req.cookies.user});
+});
+
+app.get('/landing', function(req,res,next){
+    res.render('landing', {pageTitle: 'PinLab', layout: false});
 });
 
 app.get('/productList', function(req,res,next){
-    res.render('productList', {pageTitle: 'Product List', user: req.cookies.user, products: products});
+    res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products});
 });
 
 app.get('/profiles', function(req, res, next){
@@ -75,19 +79,9 @@ app.get('/profiles', function(req, res, next){
     }
 });
 
-app.get('/productdetails/:id', function(req,res,next){
-    if(req.cookies.user){
-        let curProduct = profiles[req.params.id];
-        res.render('productDetails', {product: curProduct, pageTitle: curProduct.name});
-    }
-    else{
-        res.render('home', {pageTitle: 'PinLab', user: undefined, loginError: true})
-    }
-});
-
-//demo how request parameters are used
-app.get('/params/:text', function(req, res, next){
-    res.send(req.params.text);
+app.get('/product/:id', function(req,res,next){
+    let curProduct = products[parseInt(req.params.id)];
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct});
 });
 
 hostport = 8080;
