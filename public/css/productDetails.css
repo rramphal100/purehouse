@@ -7,11 +7,11 @@
 
 #card-image{
   float: left;
-  height: 85px;
-  width: 85px;
+  height: 110px;
+  width: 110px;
   margin: 10px;
   border-radius: 10px;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 #upvote{
@@ -38,7 +38,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 100px;
-  margin-left: 80px
+  margin-left: 300px;
 }
 
 #cardvideo{
