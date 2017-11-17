@@ -1,0 +1,157 @@
+{
+  "products": {
+    "1": {
+      "description": "Team Grammarly’s product taps into the insight that the effectiveness of a piece of text is as much a function of the context and the reader as it is of the writer’s ability to write. In order to help our users write more effectively, we analyze the style of the text along a variety of stylistic dimensions, and provide feedback on how well it matches the intended reader and context. Finally, we help the user learn by providing suggestions and tips on how to improve when their text’s predicted context and audience does not match their intended context and audience. ",
+      "link": "https://www.producthunt.com/posts/ycdb-the-y-combinator-database",
+      "maker": {
+        "avatar": "/img/anquyle.jpg",
+        "name": "Grammarly"
+      },
+      "media": "https://i.imgur.com/jdGAx2D.png",
+      "name": "Grammarly + Cornell Tech",
+      "shortdescription": "Helping your writing be clearer, more effective and have perfect style.",
+      "upvote": "139"
+    },
+    "2": {
+      "description": "The Con-Nect application is twofold. The first part of the application simplifies potential EV charger installation by giving users an easy way to analyze charger installation and placement and connect them with electricians close by.  The other aspect is a demand-response system that rewards users with points for switching off devices in their homes during grid peak hours as well as gives points to those who charge EV’s at night.",
+      "link": "https://i.imgur.com/fWsAHiW.png?1",
+      "maker": {
+        "avatar": "/img/anquyle.jpg",
+        "name": "Con-ed"
+      },
+      "media": "https://i.imgur.com/fWsAHiW.png?1",
+      "name": "Con-nect",
+      "shortdescription": "Connecting EV users to the right resources for optimal charging solutions.",
+      "upvote": "269"
+    },
+    "3": {
+      "description": "Our software is a smart fitting room app  which prompts customers to verbalize comments on items they tried with minimum efforts and attractive rewards. The value is to provide online users more reference opinions when they cannot see, touch and feel the items themselves.",
+      "link": "https://i.imgur.com/utlTG9A.png",
+      "maker": {
+        "avatar": "/img/anquyle.jpg",
+        "name": "Jcrew Crew"
+      },
+      "media": "https://i.imgur.com/utlTG9A.png",
+      "name": "Jcrew Crew",
+      "shortdescription": "Smart fitting room app that rewards customers for feedback on clothes.",
+      "upvote": 200
+    },
+    "4": {
+      "description": "Redistribute peak-time road traffic to NYC airports to off-peak times by allowing the public to easily search for flights according to the time it takes to get to or from the airport, not just price and departure time.",
+      "link": "https://i.imgur.com/nk3Kyuw.png",
+      "maker": {
+        "avatar": "/img/anquyle.jpg",
+        "name": "Sigma Search"
+      },
+      "media": "https://i.imgur.com/nk3Kyuw.png",
+      "name": "Sigma Search",
+      "shortdescription": "Making air travel easier by providing road travel data to the customer.",
+      "upvote": 153
+    },
+    "5": {
+      "description": "Leverage the UBER platform to give back to the community that it serves",
+      "link": "https://i.imgur.com/jBdXQjF.png",
+      "maker": {
+        "avatar": "/img/anquyle.jpg",
+        "name": "Uber - Platform as a Service"
+      },
+      "media": "https://i.imgur.com/jBdXQjF.png",
+      "name": "Uber - PaaS",
+      "shortdescription": "Leverage the UBER platform to give back to the community that it serves",
+      "upvote": 231
+    },
+    "6": {
+      "description": "Using online data and news sources to distinguish between real and fake news sources.  ",
+      "link": "https://i.imgur.com/FLe95Hd.png",
+      "maker": {
+        "avatar": "/img/anquyle.jpg",
+        "name": "HERO"
+      },
+      "media": "https://i.imgur.com/FLe95Hd.png",
+      "name": "HERO",
+      "shortdescription": "Saving the world from fake news one person at a time",
+      "upvote": 275
+    },
+    "7": {
+      "description": "Our goal is to bring the credibility level of big news and content platforms to unregulated platforms through a weighted endorsement-based credibility scoring system",
+      "link": "https://i.imgur.com/RCT1fpD.png",
+      "maker": {
+        "avatar": "/img/anquyle.jpg",
+        "name": "Credinet"
+      },
+      "media": "https://i.imgur.com/RCT1fpD.png",
+      "name": "Credinet",
+      "shortdescription": "Providing credibility to content on unregulated content-sharing platforms",
+      "upvote": 121
+    }
+  },
+  "profile": [
+    null,
+    {
+      "experiences": [
+        {
+          "description": "I worked at IBM as a software developer for 3 years as of January 2017.",
+          "employer": "IBM",
+          "tag": "Software Developer"
+        },
+        {
+          "description": "I worked at Google as a product manager for 7 years as of May 2014.",
+          "employer": "Google",
+          "tag": "Product Manager"
+        }
+      ],
+      "first": "John",
+      "ideas": [
+        {
+          "id": "2"
+        }
+      ],
+      "last": "Doe",
+      "rating": [
+        {
+          "rate": "4",
+          "rateeID": "2"
+        }
+      ]
+    },
+    {
+      "experiences": [
+        {
+          "description": "I worked at Yahoo as a software developer for 3 years as of January 2017.",
+          "employer": "Yahoo",
+          "tag": "Software Developer"
+        },
+        {
+          "description": "I worked at Yahoo as a product manager for 7 years as of May 2014.",
+          "employer": "Apple",
+          "tag": "Product Manager"
+        }
+      ],
+      "first": "Jolly",
+      "ideas": [
+        {
+          "id": "1"
+        }
+      ],
+      "last": "Doe",
+      "rating": [
+        {
+          "rate": "5",
+          "rateeID": "1"
+        }
+      ]
+    }
+  ],
+  "users": {
+    "1891374464214025": {
+      "avatar": "https://scontent.xx.fbcdn.net/v/t1.0-1/s100x100/16640901_1556226081062200_5158864833629323987_n.jpg?oh=a6faeb173c99f02e141c380e2b05438f&oe=5A79C987",
+      "id": "1891374464214025",
+      "name": "An Le"
+    },
+    "801207350004187": {
+      "avatar": "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/22308777_797506623707593_3820072900172825692_n.jpg?oh=0704131ce93455bfda1b8534126e4418&oe=5A7F0FEF",
+      "id": "801207350004187",
+      "name": "Ryan Ramphal"
+    }
+  }
+}

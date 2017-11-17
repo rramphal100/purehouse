@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
     <head>
-        <title>{{PinLab}}</title>
+        <title>{{pageTitle}}</title>
         <meta charset='utf-8'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,28 +12,93 @@
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    </head>
+        <link href="css/home.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-    <body id="landingBackground" background="./img/pexels-photo-247839.jpeg" style="background-size:cover">
-      <div class="logos">
-        <img class="landingLogoText" src="./img/logo_text_white.png" alt="PinLab">
-        <img class="landingLogo" src="./img/logo.png" alt="PinLab">
-      </div>
-      <h3 color="white" class="landingText">Elevating the right ideas by connecting the right people</h3>
-      <div class="landingPage">
-        <nav class="searchnav">
-          <div class="nav-wrapper">
-            <form>
-              <div class="input-field">
-                <input id="search" type="search" required>
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
+    <body id="landingBackground" background="img/background.png" style="background-size:cover">
+      <header>
+        <!--  Nav -->
+          <nav role="navigation" class="cyan lighten-2">
+            <!-- <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Community Logo</a> -->
+            <div class="row">
+              <div class="col m1"></div>
+              <div class="col m2"><img src="images/logo.png" alt="logo" width="65" height="65"><a href="#" class="brand-logo">PinLab</a></div>
+              <img class="responsive-img" src="cool_pic.jpg">
+              <div class="col m2"></div>
+              <div class="col m2"></div>
+              <div class="col m2">
+                <ul class="right" id="slide-out">
+                  <li><a href="badges.html">Products</a></li>
+                  <li><a href="badges.html">Blog</a></li>
+                </ul>
               </div>
-            </form>
-          </div>
-      </div>
-      </nav>
-    </body>
+              <div class="col m2">
+                <div class="nav-wrapper">
+                    <ul class="right">
+                      <li><a href="search.html"><i class="material-icons">search</i></a></li>
+                      <li><a href="mail.html"><i class="material-icons">mail</i></a></li>
+                      {{#if user}}
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons">account_box</i></a></li>
+                      {{else}}
+                        <li><a href="/login">Log In</a></li>
+                      {{/if}}
+                    </ul>
+                </div>
+                {{#if user}}
+                  <ul id="dropdown1" class="dropdown-content">
+                    <li><a href="#!">Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#!">Help</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#!">Sign out</a></li>
+                  </ul>
+                {{/if}}
+              </div>
+              <div class="col m1"></div>
+            </div>
 
-</html>
+              <a href="#" id="side-nav-toggle" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <!-- </div> -->
+          </nav>
+      </header>
+
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br><br>
+      <div class="section no-pad-bot" id="index-banner">
+          <div class="container">
+            <br><br>
+            <!-- <h3 class="header center orange-text">PinLab</h3> -->
+            <br><br>
+            <br><br>
+            <br><br>
+
+            <div class="row center">
+              <h3 class="header white-text ">Connecting entrepreneurs at your school.</h3>
+            </div>
+
+            <div class="row center">
+              <div class="col s1 m3">
+
+              </div>
+              <div class="col s10 m6">
+                <input type="text" name="search" class="white-text" placeholder="Enter your community...">
+              </div>
+            </div>
+            <br><br>
+          </div>
+        </div>
+        <br><br>
+      </div>
+  </div>
+
+    <!-- Footer -->
+
+
+     <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+  </html>
