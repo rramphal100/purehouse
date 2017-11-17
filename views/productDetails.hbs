@@ -90,8 +90,8 @@
           -->
           <ul id="roles">
             {{#each roles}}
-              <li class="grey-text text-lighten-4 rolesubmit">
-                <h5 style="color:red">{{name}}</h5>
+              <li class="grey-text text-lighten-4 rolesubmit roletitle">
+                <h5 style="color:red" class="roletitle">{{name}}</h5>
                 <form class="roleidcontainer" action="/roledetails" method="POST">
                   <input type="hidden" name="roleid" value="{{roleid}}" />
                 </form>

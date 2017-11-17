@@ -31,3 +31,7 @@ ul.roleRequirements > li {
 #whole{
   padding-top: 30px;
 }
+
+.roletitle:hover {
+  cursor: pointer;
+}
