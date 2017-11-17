@@ -7,16 +7,6 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var hbs = require('hbs')
 
-app.set("views", path.join(__dirname, "views"));
-app.use(express.static('public'));
-app.use(cookieParser());
-hbs.registerPartials(__dirname + '/views/partials');
-
-app.set("view engine", "hbs");
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-
 var config = {
     apiKey: process.env.APIKEY,
     authDomain: process.env.AUTHDOMAIN,
@@ -46,6 +36,26 @@ firebaseRoleRef.on('value', (snapshot) => {
     roles = snapshot.val();
 });
 
+app.use(express.static(path.join(__dirname,'/public')));
+app.use(cookieParser());
+hbs.registerPartials(__dirname + '/views/partials');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "hbs");
+
+app.get('/product', function(req,res){
+    let curProduct = products[1];
+    console.log("Testing here");
+    console.log(curProduct);
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct});
+});
+
+app.get('/roledetails/:roleid', function(req,res,next){
+    let curRole = roles[parseInt(req.params.roleid)];
+    res.render('roledetails', {pageTitle: curRole.name, user: req.cookies.user, role: curRole});
+});
+
 // Route for handling login requests
 app.route('/user')
     .get(function(req, res){
@@ -64,23 +74,27 @@ app.route('/user')
         res.send('Logged out successfully.');
     });
 
-app.get('/', function(req,res,next){
+app.get('/', function(req,res){
     res.render('landing', {user: req.cookies.user, layout: false});
 });
 
+<<<<<<< HEAD
 app.get('/schoolselect', function(req,res,next){
     res.render('schoolselect', {user: req.cookies.user, layout: false});
 });
 
 app.get('/home', function(req,res,next){
+=======
+app.get('/home', function(req,res){
+>>>>>>> 3a539f2dfa655a97ab4e1fdc78f4baf841d0db90
     res.render('home');
 });
 
-app.get('/productList', function(req,res,next){
+app.get('/productList', function(req,res){
     res.render('productList', {pageTitle: 'Project List', user: req.cookies.user, products: products});
 });
 
-app.get('/profiles', function(req, res, next){
+app.get('/profiles', function(req, res){
     if(req.cookies.user){
         res.render('profiles', {pageTitle: "Profiles", profiles: profiles, user: req.cookies.user});
     }
@@ -89,15 +103,7 @@ app.get('/profiles', function(req, res, next){
     }
 });
 
-app.get('/product/:id', function(req,res,next){
-    let curProduct = products[parseInt(req.params.id)];
-    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct});
-});
 
-app.get('/roledetails/:roleid', function(req,res,next){
-    let curRole = roles[parseInt(req.params.roleid)];
-    res.render('roledetails', {pageTitle: curRole.name, user: req.cookies.user, role: curRole});
-});
 
 hostport = 8080;
 if (process.env.NODE_ENV === 'PRODUCTION'){
