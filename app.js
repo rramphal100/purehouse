@@ -68,6 +68,10 @@ app.get('/', function(req,res,next){
     res.render('landing', {user: req.cookies.user, layout: false});
 });
 
+app.get('/schoolselect', function(req,res,next){
+    res.render('schoolselect', {user: req.cookies.user, layout: false});
+});
+
 app.get('/home', function(req,res,next){
     res.render('home');
 });
