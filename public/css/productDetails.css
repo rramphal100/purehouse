@@ -1,4 +1,48 @@
 #header{
+  float: left;
+  padding-top: 10px;
   padding-left: 15px;
   padding-bottom: 10px;
+}
+
+#card-image{
+  float: left;
+  height: 85px;
+  width: 85px;
+  margin: 10px;
+  border-radius: 10px;
+  padding-top: 15px;
+
+}
+
+#card{
+  padding-right: 100px;
+  padding-left: 100px;
+}
+#card2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-right: 100px;
+  padding-left: 100px
+}
+#description{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 100px
+}
+#descriptiontext{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 100px;
+  margin-left: 20px
+}
+
+#cardvideo{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

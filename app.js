@@ -48,7 +48,7 @@ app.get('/product', function(req,res){
     let curProduct = products[1];
     console.log("Testing here");
     console.log(curProduct);
-    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, css: ['sidenav.css']});
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, css: ['sidenav.css', 'productDetails.css']});
 });
 
 app.get('/roledetails/:roleid', function(req,res,next){
