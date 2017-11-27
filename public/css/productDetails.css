@@ -37,7 +37,7 @@
 #descriptiontext{
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-right: 100px;
+  margin-right: 8%;
   margin-left: 300px;
 }
 
@@ -59,7 +59,7 @@
 #talenttext{
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-right: 50px;
+  margin-right: 8%;
   margin-left: 50px
 }
 
@@ -68,7 +68,8 @@
   margin-bottom: 20px;
   margin-right: 90px;
   margin-left: auto;
-
+  text-decoration: underline;
+  text-decoration-color: #2196f3;
 }
 #creator{
   margin-top: 20px;
@@ -80,8 +81,10 @@
 
   margin-top: 10px;
   margin-bottom: 20px;
-  margin-right: 90px;
+  margin-right: 8%;
   margin-left: auto;
+  text-decoration: underline;
+  text-decoration-color: #2196f3;
 }
 
 .inline{
@@ -90,6 +93,6 @@
 
 #vote-button{
   margin-top: 20px;
-  margin-right: 90px;
+  margin-right: 8%;
   margin-left: auto;
 }

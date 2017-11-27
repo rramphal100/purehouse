@@ -56,7 +56,7 @@
       <div class="card horizontal">
         <h5 id="creator"><font class="light" color=black>Creator:</font></h5>
         <div id="creatortext">
-          <h5 class="small-description"><font class="regular" color=#2196f3>{{product.maker.name}}</font></h5>
+          <h5 class="small-description"><font class="regular" color=#ef5350>{{product.maker.name}}</font></h5>
         </div>
       </div>
     </div>
@@ -70,7 +70,7 @@
     <div class="col s12 m7" id="card">
       <div class="card horizontal">
         <h5 class="header light" id="description"><font color=black>Description:</font></h5>
-        <h5 class="small-description" id="descriptiontext"><font color=black>{{product.description}}</font></h5>
+        <h6 class="small-description" id="descriptiontext"><font color=black>{{product.description}}</font></h6>
       </div>
     </div>
 
@@ -91,7 +91,7 @@
           <ul id="roles">
             {{#each roles}}
               <li class="grey-text text-lighten-4 rolesubmit roletitle">
-                <h5 style="color:#2196f3" class="roletitle">{{name}}</h5>
+                <h5 style="color:blue" class="roletitle">{{name}}</h5>
                 <form class="roleidcontainer" action="/roledetails" method="POST">
                   <input type="hidden" name="roleid" value="{{roleid}}" />
                 </form>
