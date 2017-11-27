@@ -130,7 +130,7 @@ app.get('/profiles', function(req, res){
     }
 });
 
-hostport = 8080;
+hostport = process.env.PORT || 8080;
 if (process.env.NODE_ENV === 'PRODUCTION'){
     hostport = 80;
 }
