@@ -130,10 +130,7 @@ app.get('/profiles', function(req, res){
     }
 });
 
-hostport = process.env.PORT || 8080;
-if (process.env.NODE_ENV === 'PRODUCTION'){
-    hostport = 80;
-}
+var hostport = process.env.PORT || 8080;
 
 app.listen(hostport, function(){
     console.log("PinLab is running on port " + hostport.toString());
