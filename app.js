@@ -63,7 +63,7 @@ app.post('/product', function(req,res){
     console.log(JSON.stringify(curRoles));
 
     res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, productId: req.body.projectid,
-        roles: curRoles, css: ['sidenav.css', 'productDetails.css', 'review.css']}); 
+        roles: curRoles, css: ['sidenav.css', 'productDetails.css', 'review.css']});
 });
 
 
@@ -76,7 +76,8 @@ app.post('/team', function(req,res,next){
     }
 
     res.render('creatorDetails', {user: req.cookies.user, pageTitle: req.body.projectName, teammates: teammates,
-        teamdescription: curProduct.teamdescription, productname: curProduct.name});
+        teamdescription: curProduct.teamdescription, productname: curProduct.name,
+        css: ['sidenav.css', 'creatorDetails.css']});
 });
 
 app.post('/roledetails', function(req,res,next){

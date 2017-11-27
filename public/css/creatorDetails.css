@@ -1,0 +1,104 @@
+#header{
+  float: left;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+#card-image{
+  float: left;
+  height: 110px;
+  width: 110px;
+  margin: 10px;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+
+#upvote{
+  float: right;
+}
+
+#card{
+  padding-right: 100px;
+  padding-left: 100px;
+}
+#card2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-right: 100px;
+  padding-left: 100px
+}
+#description{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 100px
+}
+#descriptiontext{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 8%;
+  margin-left: 300px;
+}
+
+#cardvideo{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#talent{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 90px
+}
+#talenttext{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 8%;
+  margin-left: 50px
+}
+
+#roles{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 90px;
+  margin-left: auto;
+  text-decoration: underline;
+  text-decoration-color: #2196f3;
+}
+#creator{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 100px
+}
+#creatortext{
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 8%;
+  margin-left: auto;
+  text-decoration: underline;
+  text-decoration-color: #2196f3;
+}
+#commentsTitle{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 100px
+}
+
+.inline{
+  display: inline;
+}
+
+#vote-button{
+  margin-top: 20px;
+  margin-right: 8%;
+  margin-left: auto;
+}
