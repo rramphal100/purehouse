@@ -56,7 +56,7 @@
       <div class="card horizontal">
         <h5 id="creator"><font class="light" color=black>Creator:</font></h5>
         <div id="creatortext">
-          <h5 class="small-description"><font class="regular" color=#2196f3>{{product.maker.name}}</font></h5>
+          <h5 class="small-description" id="creatorname"><font class="regular" color=#2196f3>{{product.maker.name}}</font></h5>
         </div>
       </div>
     </div>
@@ -88,6 +88,7 @@
                 <h5 style="color:#2196f3" class="roletitle">{{name}}</h5>
                 <form class="roleidcontainer" action="/roledetails" method="POST">
                   <input type="hidden" name="roleid" value="{{roleid}}" />
+                  <input type="hidden" name="productname" value="{{@root.product.name}}" />
                 </form>
               </li>
             {{/each}}
