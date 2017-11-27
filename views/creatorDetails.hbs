@@ -1,7 +1,31 @@
 
+<!--  Sidebar -->
+<ul id="nav-mobile sidenav" class="side-nav fixed">
+  <li>
+    <div class="user-view" id="sidenav">
+      <div class="background z-depth-1">
 
+      </div id="sidenav_top">
+        <a href="#!user"><img class="circle" src="img/TwistedT.jpg"></a>
+        <a href="#!name"><span class="white-text name">Cornell Tech</span></a>
+        <a href="#!email"><span class="black-text email"></span></a>
+      </div>
+
+  </li>
+  <li><a class="subheader">Categories</a></li>
+  <li><a href="#!"><i class="material-icons">attach_money</i>FinTech</a></li>
+  <li><a href="#!"><i class="material-icons">school</i>EdTech</a></li>
+  <li><a href="#!"><i class="material-icons">watch</i>Wearable</a></li>
+  <li><a href="#!"><i class="material-icons">settings_remote</i>IOT</a></li>
+  <li><a href="#!"><i class="material-icons">store</i>Retails</a></li>
+  <li><a href="#!"><i class="material-icons">live_tv</i>Media</a></li>
+  <li><a href="#!"><i class="material-icons">people</i>Social</a></li>
+  <li><a href="#!"><i class="material-icons">local_florist</i>Nonprofit</a></li>
+  <li><div class="divider"></div></li>
+</ul>
 
 <!-- Middle Content -->
+
     <div class=" " id="card">
         <div class="card horizontal" >
           <div id="middle_content">
@@ -28,18 +52,6 @@
         <a id="vote-button" class="waves-effect waves-light btn light red"><i class="material-icons right">favorite</i>{{product.upvote}}</a>
       </div>
     </div>
-
-    <div id="test">
-      <h2>{{productname}}</h2>
-      <ul id="creatorList">
-        {{#each teammates}}
-          <li>{{name}}</li>
-        {{/each}}
-      </ul>
-      <br>
-      <h6>{{teamdescription}}</h6>
-    </div>
-
     <div class="col s12 m7" id="card">
       <div class="card horizontal">
         <h5 id="creator"><font class="light" color=black>Creator:</font></h5>
