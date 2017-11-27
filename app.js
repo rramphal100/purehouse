@@ -36,7 +36,7 @@ firebaseRoleRef.on('value', (snapshot) => {
     roles = snapshot.val();
 });
 
-app.use(express.static(path.join(__dirname,'/public')));
+app.use('/static', express.static(path.join(__dirname,'/public')));
 app.use(cookieParser());
 hbs.registerPartials(__dirname + '/views/partials');
 app.use(bodyParser.json());
@@ -63,6 +63,23 @@ app.post('/product', function(req,res){
     console.log(JSON.stringify(curRoles));
 
     res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, productId: req.body.projectid,
+        roles: curRoles, css: ['sidenav.css', 'productDetails.css', 'review.css']});
+});
+
+//---------------------NEW CODE---------------------------------------------
+app.get('/product/:projectid', function(req,res){
+    let curProduct = products[parseInt(req.params.projectid)];
+    //get roles for this product
+    let curRoles = [];
+    for(let role of roles){
+        if(role.productid == req.params.projectid){
+            curRoles.push(role);
+        }
+        else{
+            curRoles.push(null);
+        }
+    }
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct, productId: req.params.projectid,
         roles: curRoles, css: ['sidenav.css', 'productDetails.css', 'review.css']});
 });
 

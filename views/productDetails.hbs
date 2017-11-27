@@ -6,7 +6,7 @@
       <div class="background z-depth-1">
 
       </div id="sidenav_top">
-        <a href="#!user"><img class="circle" src="img/TwistedT.jpg"></a>
+        <a href="#!user"><img class="circle" src="/static/img/TwistedT.jpg"></a>
         <a href="#!name"><span class="white-text name">Cornell Tech</span></a>
         <a href="#!email"><span class="black-text email"></span></a>
       </div>
@@ -60,24 +60,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="col 12 m7" id="card">
-      <div class="card horizontal">
-        <h5 class="header light" id="talent"><font color=black><span class="nowrap">Talent&nbsp;we&nbsp;need:</span></font></h5>
-          <ul id="roles">
-            {{#each roles}}
-              <li class="grey-text text-lighten-4 rolesubmit roletitle">
-                <h5 style="color:#2196f3" class="roletitle">{{name}}</h5>
-                <form class="roleidcontainer" action="/roledetails" method="POST">
-                  <input type="hidden" name="roleid" value="{{roleid}}" />
-                </form>
-              </li>
-            {{/each}}
-          </ul>
-
-      </div>
-    </div> -->
-
     <div class="col 12 m7" id="card">
       <div class=row>
       <div class="card horizontal">
@@ -93,13 +75,6 @@
               </li>
             {{/each}}
           </ul>
-
-
-
-
-
-
-
           <!-- link to team details  -->
           <form action="/team" method="POST" id="teamform">
             <input type="hidden" name="projectName" value="{{product.maker.name}}">
