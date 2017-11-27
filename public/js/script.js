@@ -18,23 +18,11 @@ $(function(){
             }
           });
     });
-
-    $('.productcard').on('click', function(){
-        $(this).find('.projectidstorage').submit();
-    });
-
-    $('.rolesubmit').on('click', function(){
-        $(this).find('.roleidcontainer').submit();
-    });
     
     $('#search').keypress(function(e){
       if(e.keyCode==13){
         $(location).attr("href", "/schoolselect");
       }
-    });
-
-    $($('h5.small-description')[0]).on('click', function(){
-        $('#teamform').submit();
     });
 
     $('.modal-trigger').on('click', function(){

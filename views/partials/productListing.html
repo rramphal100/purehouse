@@ -1,16 +1,18 @@
 <div class="col s6 m4">
   <div class="card productcard">
-  <div class="card-image">
-      <img src="{{media}}">
-      <span class="card-title">{{name}}</span>
-      <a class="btn-floating halfway-fab waves-effect waves-light blue lighten-1"><i class="material-icons">thumb_up</i></a>
-      <span class="new badge left blue lighten-1" data-badge-caption="">{{upvote}}</span>
-    </div>
-    <div class="card-content">
-      <p>{{shortdescription}}</p>
-    </div>
-    <form class="projectidstorage" action="/product" method="POST">
-      <input type="hidden" name="projectid" value="{{@index}}" />
-    </form>
+    <a href="/project/{{@index}}">
+      <div class="card-image">
+        <img src="{{media}}">
+        <span class="card-title">{{name}}</span>
+        <a class="btn-floating halfway-fab waves-effect waves-light blue lighten-1"><i class="material-icons">thumb_up</i></a>
+        <span class="new badge left blue lighten-1" data-badge-caption="">{{upvote}}</span>
+      </div>
+      <div class="card-content">
+        <p>{{shortdescription}}</p>
+      </div>
+      <form class="projectidstorage" action="/product" method="POST">
+        <input type="hidden" name="projectid" value="{{@index}}" />
+      </form>
+    </a>
   </div>
 </div>

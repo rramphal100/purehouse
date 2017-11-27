@@ -5,7 +5,11 @@ var firebase = require('firebase');
 var dotenv = require('dotenv-safe').load();
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
-var hbs = require('hbs')
+var hbs = require('hbs');
+
+hbs.registerHelper('urlencode', function(text){
+    return encodeURIComponent(text);
+});
 
 var config = {
     apiKey: process.env.APIKEY,
@@ -67,7 +71,7 @@ app.post('/product', function(req,res){
 });
 
 //---------------------NEW CODE---------------------------------------------
-app.get('/product/:projectid', function(req,res){
+app.get('/project/:projectid', function(req,res){
     let curProduct = products[parseInt(req.params.projectid)];
     //get roles for this product
     let curRoles = [];
@@ -97,10 +101,28 @@ app.post('/team', function(req,res,next){
         css: ['sidenav.css', 'creatorDetails.css']});
 });
 
+//-----------------------------NEW CODE----------------------------------
+app.get('/project/team/:projectid', function(req,res,next){
+    let curProduct = products[parseInt(req.params.projectid)];
+    let teammates = [];
+    for(let id of curProduct.creators){
+        teammates.push(profiles[id]);
+    }
+    res.render('creatorDetails', {user: req.cookies.user, pageTitle: curProduct.maker.name, teammates: teammates,
+        teamdescription: curProduct.teamdescription, productname: curProduct.name, teampic: curProduct.teampic,
+        css: ['sidenav.css', 'creatorDetails.css']});
+});
+
 app.post('/roledetails', function(req,res,next){
     let curRole = roles[parseInt(req.body.roleid)];
     console.log(req.body.productname);
     res.render('roleDetail', {pageTitle: curRole.name, user: req.cookies.user, role: curRole, productname: req.body.productname});
+});
+
+//------------------------------NEW CODE---------------------------------
+app.get('/roledetails/:roleid', function(req,res,next){
+    let curRole = roles[parseInt(req.params.roleid)];
+    res.render('roleDetail', {pageTitle: curRole.name, user: req.cookies.user, role: curRole, productname: req.query.productname});
 });
 
 // Route for handling login requests
