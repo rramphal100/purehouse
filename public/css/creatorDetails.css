@@ -1,8 +1,8 @@
 #header{
   float: left;
-  padding-top: 10px;
+  padding-top: 0px;
   padding-left: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 #card-image{
@@ -30,9 +30,9 @@
 }
 #description{
   margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  margin-left: 100px
+  margin-bottom: 25px;
+  margin-right: auto;
+  margin-left: 20px
 }
 #descriptiontext{
   margin-top: 20px;

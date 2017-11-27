@@ -1,157 +1,68 @@
+<!--  Sidebar -->
+<ul id="nav-mobile sidenav" class="side-nav fixed">
+  <li>
+    <div class="user-view" id="sidenav">
+      <div class="background z-depth-1">
 
+      </div id="sidenav_top">
+        <a href="#!user"><img class="circle" src="img/TwistedT.jpg"></a>
+        <a href="#!name"><span class="white-text name">Cornell Tech</span></a>
+        <a href="#!email"><span class="black-text email"></span></a>
+      </div>
+
+  </li>
+  <li><a class="subheader">Categories</a></li>
+  <li><a href="#!"><i class="material-icons">attach_money</i>FinTech</a></li>
+  <li><a href="#!"><i class="material-icons">school</i>EdTech</a></li>
+  <li><a href="#!"><i class="material-icons">watch</i>Wearable</a></li>
+  <li><a href="#!"><i class="material-icons">settings_remote</i>IOT</a></li>
+  <li><a href="#!"><i class="material-icons">store</i>Retails</a></li>
+  <li><a href="#!"><i class="material-icons">live_tv</i>Media</a></li>
+  <li><a href="#!"><i class="material-icons">people</i>Social</a></li>
+  <li><a href="#!"><i class="material-icons">local_florist</i>Nonprofit</a></li>
+  <li><div class="divider"></div></li>
+</ul>
 
 
 <!-- Middle Content -->
-    <div class=" " id="card">
+    <div class="" id="card">
         <div class="card horizontal" >
           <div id="middle_content">
 
             <div class="">
-              <div class="card-image" id="card-image">
-                <img src="{{product.media}}">
-              </div>
-
-              <div id="header">
-                <h4 class="header">{{product.name}}</h4>
-                <h6 class="small-description"><font class="" color=#9e9e9e>{{product.shortdescription}}</font></h6>
-              </div>
-
-
-              <div class="row">
-                <span class="left new badge cyan" data-badge-caption="ios"></span>
-                <span class="left new badge cyan" data-badge-caption="edtech"></span>
-                <span class="left new badge cyan" data-badge-caption="android"></span>
-              </div>
+                <div id="header">
+                  <h4 class="header">{{productname}} Team</h4>
+                </div>
+                <div class="row" id="description">
+                    <span class="left"><h6>{{teamdescription}}</h6></span>
+                </div>
             </div>
-
-        </div>
-        <a id="vote-button" class="waves-effect waves-light btn light red"><i class="material-icons right">favorite</i>{{product.upvote}}</a>
-      </div>
-    </div>
-
-    <div id="test">
-      <h2>{{productname}}</h2>
-      <ul id="creatorList">
-        {{#each teammates}}
-          <li>{{name}}</li>
-        {{/each}}
-      </ul>
-      <br>
-      <h6>{{teamdescription}}</h6>
-    </div>
-
-    <div class="col s12 m7" id="card">
-      <div class="card horizontal">
-        <h5 id="creator"><font class="light" color=black>Creator:</font></h5>
-        <div id="creatortext">
-          <h5 class="small-description"><font class="regular" color=#ef5350>{{product.maker.name}}</font></h5>
         </div>
       </div>
     </div>
 
     <div class="col s12 m7" id="card">
         <div class="card horizontal" id="cardvideo" >
-            <iframe width="1000" height="562" src="{{product.video}}" frameborder="0" allowfullscreen></iframe>
+            <img width="1000" height="562" src="{{teampic}}">
         </div>
     </div>
 
-    <div class="col s12 m7" id="card">
-      <div class="card horizontal">
-        <h5 class="header light" id="description"><font color=black>Description:</font></h5>
-        <h6 class="small-description" id="descriptiontext"><font color=black>{{product.description}}</font></h6>
-      </div>
-    </div>
-
     <div class="col 12 m7" id="card">
-      <div class="card horizontal">
-        <h5 class="header light" id="talent"><font color=black><span class="nowrap">Talent&nbsp;we&nbsp;need:</span></font></h5>
-        <!-- <h6 class="small-description" id="talenttext"><font color=#9e9e9e>{{product.description}}</font></h6> -->
-
-          <!--
-
-          <ul id="roles">
-            <li class="grey-text text-lighten-4 right-align"><a href="ourstory.html" style="color:#ef5350"><h5>Front End Engineer</h5></a></li>
-            <li class="grey-text text-lighten-4 right-align"><a href="ourstory.html" style="color:#ef5350"><h5>UX Designer</h5></a></li>
-            <li class="grey-text text-lighten-4 right-align"><a href="ourstory.html" style="color:#ef5350"><h5>Data Scientist</h5></a></li>
-          </ul>
-
-          -->
-          <ul id="roles">
-            {{#each roles}}
-              <li class="grey-text text-lighten-4 rolesubmit roletitle">
-                <h5 style="color:blue" class="roletitle">{{name}}</h5>
-                <form class="roleidcontainer" action="/roledetails" method="POST">
-                  <input type="hidden" name="roleid" value="{{roleid}}" />
-                </form>
-              </li>
-            {{/each}}
-          </ul>
-
-      </div>
-    </div>
-
-    <div class="col 12 m7" id="card">
-      <ul class="collection">
+      <ul class="collection" id="creatorList">
+        {{#each teammates}}
         <li class="collection-item avatar">
-          <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle">
-          <span class="reviewer">Jerry Jeffreys</span>
-          <p class="review-title">The application has potential but I think that you will have to concentrate really hard on your wedge. After that though, I think this is a bomb idea!</p><br>
-          <p class="review-text">
-            <!-- Second Line -->
+          <img src="{{profilepic}}" alt="" class="circle grey">
+          <span class="title" style="font-weight: bold">{{name}}</span>
+          <p>{{title}} <br>
+             {{tag}}
           </p>
-
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i></a>
+          <a href="#!" class="secondary-content"><i class="material-icons">person</i></a>
         </li>
-
-        <li class="collection-item avatar">
-          <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle">
-          <span class="reviewer">Jon Doe</span>
-          <p class="review-title">How did you come up with this idea? I am very curious about your thought process and how you came to this conclusion. </p><br>
-          <p class="review-text">
-            <!-- Second Line -->
-          </p>
-
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i></a>
-        </li>
-
-        <li class="collection-item avatar">
-          <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle">
-          <span class="reviewer">Zen Yui</span>
-          <p class="review-title">This application has potential but I think the challenge is sentiment analysis. How do you tell satire from straighforward context?</p><br>
-          <p class="review-text">
-          </p>
-
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i></a>
-        </li>
-
-        <li class="collection-item avatar">
-          <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle">
-          <span class="reviewer">Anna Guidi</span>
-          <p class="review-title">This looks interesting but you should add something to gain the users' trust. How do users know this is going to work the next time they use it?</p><br>
-          <p class="review-text">
-          </p>
-
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i></a>
-        </li>
-
-        <li class="collection-item avatar">
-          <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle">
-          <span class="reviewer">An Le</span>
-          <p class="review-title">This seems pretty cool.</p><br>
-          <p class="review-text">
-          </p>
-
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i></a>
-        </li>
-
-        <li class="collection-item avatar">
-          <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle">
-          <span class="reviewer">Leland Rechis</span>
-          <p class="review-title">This service definitely has potential, I even find myself double-checking my emails too often. Great idea!</p><br>
-          <p class="review-text">
-          </p>
-
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i><i class="material-icons">grade</i></a>
-        </li>
+        {{/each}}
       </ul>
+  </div>
+
+
+
+      </div>
     </div>

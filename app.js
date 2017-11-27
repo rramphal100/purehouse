@@ -76,7 +76,7 @@ app.post('/team', function(req,res,next){
     }
 
     res.render('creatorDetails', {user: req.cookies.user, pageTitle: req.body.projectName, teammates: teammates,
-        teamdescription: curProduct.teamdescription, productname: curProduct.name,
+        teamdescription: curProduct.teamdescription, productname: curProduct.name, teampic: curProduct.teampic,
         css: ['sidenav.css', 'creatorDetails.css']});
 });
 
