@@ -12,10 +12,10 @@
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-        <link href="css/role.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="/static/css/role.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="/static/css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         {{#each css}}
-          <link type="text/css" rel="stylesheet" media="screen,projection" href="/css/{{this}}" />
+          <link type="text/css" rel="stylesheet" media="screen,projection" href="/static/css/{{this}}" />
         {{/each}}
     </head>
     <body>
@@ -25,8 +25,8 @@
             <!-- <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Community Logo</a> -->
             <div class="row">
               <div class="col m1"></div>
-              <div class="col m2"><img src="images/logo.png" alt="logo" width="65" height="65"><a href="/" class="brand-logo">PinLab</a></div>
-              <img class="responsive-img" src="cool_pic.jpg">
+              <div class="col m2"><img src="/static/images/logo.png" alt="logo" width="65" height="65"><a href="/" class="brand-logo">PinLab</a></div>
+              <img class="responsive-img" src="/static/cool_pic.jpg">
               <div class="col m2"></div>
               <div class="col m2"></div>
               <div class="col m2">
@@ -117,7 +117,7 @@
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-        <script src="js/init.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
+        <script src="/static/js/init.js"></script>
+        <script type="text/javascript" src="/static/js/script.js"></script>
     </body>
 </html>

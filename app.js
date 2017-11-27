@@ -44,6 +44,38 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
+
+
+//temp to test new static route
+app.get('/product/:productid', function(req,res){
+    let curProduct = products[parseInt(req.params.productid)];
+
+    //get roles for this product
+    let curRoles = [];
+    for(let role of roles){
+        console.log('id from req body: ', req.params.productid);
+        console.log('id from current role: ', role.productid);
+        if(role.productid == req.params.productid){
+            curRoles.push(role);
+        }
+        else{
+            curRoles.push(null);
+        }
+    }
+
+    console.log(JSON.stringify(curRoles));
+
+    res.render('productDetails', {pageTitle: curProduct.name, user: req.cookies.user, product: curProduct,
+        roles: curRoles, css: ['sidenav.css', 'productDetails.css', 'review.css']}); 
+});
+
+
+
+
+
+
+
+
 app.post('/product', function(req,res){
     let curProduct = products[parseInt(req.body.projectid)];
 
