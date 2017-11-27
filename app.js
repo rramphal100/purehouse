@@ -82,8 +82,8 @@ app.post('/team', function(req,res,next){
 
 app.post('/roledetails', function(req,res,next){
     let curRole = roles[parseInt(req.body.roleid)];
-    console.log(JSON.stringify(curRole.responsibilities));
-    res.render('roleDetail', {pageTitle: curRole.name, user: req.cookies.user, role: curRole});
+    console.log(req.body.productname);
+    res.render('roleDetail', {pageTitle: curRole.name, user: req.cookies.user, role: curRole, productname: req.body.productname});
 });
 
 // Route for handling login requests
@@ -130,10 +130,7 @@ app.get('/profiles', function(req, res){
     }
 });
 
-hostport = 8080;
-if (process.env.NODE_ENV === 'PRODUCTION'){
-    hostport = 80;
-}
+var hostport = process.env.PORT || 8080;
 
 app.listen(hostport, function(){
     console.log("PinLab is running on port " + hostport.toString());

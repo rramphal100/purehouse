@@ -29,6 +29,10 @@
     width: 50px;
 }
 
-#creatortext h5 font:hover{ 
+#creatorname:hover{ 
+    cursor: pointer;
+}
+
+.productcard:hover{
     cursor: pointer;
 }
