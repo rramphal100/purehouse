@@ -28,3 +28,7 @@
 .glyphicon-star{
     width: 50px;
 }
+
+#creatortext h5 font:hover{ 
+    cursor: pointer;
+}

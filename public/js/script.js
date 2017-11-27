@@ -32,4 +32,9 @@ $(function(){
         $(location).attr("href", "/schoolselect");
       }
     });
+
+    $($('h5.small-description')[0]).on('click', function(){
+        $('#teamform').submit();
+    });
+
 });

@@ -99,8 +99,24 @@
             {{/each}}
           </ul>
 
+
+
+
+
+
+
+          <!-- link to team details  -->
+          <form action="/team" method="POST" id="teamform">
+            <input type="hidden" name="projectName" value="{{product.maker.name}}">
+            <input type="hidden" name="projectId" value="{{productId}}">
+          </form>
       </div>
     </div>
+
+
+
+
+    
 
     <div class="col 12 m7" id="card">
       <ul class="collection">
