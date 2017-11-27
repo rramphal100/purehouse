@@ -37,4 +37,8 @@ $(function(){
         $('#teamform').submit();
     });
 
+    $('.modal-trigger').on('click', function(){
+        $('.modal').modal();
+    });
+
 });
