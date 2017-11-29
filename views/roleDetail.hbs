@@ -3,8 +3,8 @@
 
     <!-- <div class="card" id="an" style="background-color: #FFFFFF"> -->
       <div class="card-content white-text">
-        <span class="card-title" style="color: #ef5350"><h3><strong>{{productname}}</strong></h3></span>
-        <span class="card-title" style="color: #ef5350"><h5><strong>{{role.name}}</strong></h5></span>
+        <span class="card-title" style="color: black"><h3><strong>{{role.name}}</strong></h3></span>
+        <span class="card-title" style="color: #ef5350"><h5><strong>{{productname}}</strong></h5></span>
         <hr>
         <h5 style="color: black">{{role.description}}</h5>
         <br>
@@ -16,10 +16,11 @@
             {{/each}}
           </ul>
         {{/if}}
+        <br>
       </div>
 
       <div class="card-action">
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" style="background-color: #ef5350">I'm Interested!</a>
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">I'm Interested!</a>
       </div>
     <!-- </div> -->
     <b></b>
@@ -38,7 +39,7 @@
 <div id="modal1" class="modal">
   <div class="modal-content">
     <h4>Request Confirmation</h4>
-    <h5>Do you want to apply for the <span style="color: #ef5350">{{role.name}}</span> role for the <span style="color: #ef5350">{{productname}}</span> project?</h5>
+    <h6>Do you want to apply for the <span style="color: #ef5350">{{role.name}}</span> role for the <span style="color: #ef5350">{{productname}}</span> project?</h6>
   </div>
   <div class="modal-footer">
     <a href="#!" class=" modal-action modal-close waves-effect waves-light btn" style="background-color: #ef5350">Yes</a>
